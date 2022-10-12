@@ -47,9 +47,7 @@
 	 */
 	function update(event: MouseEvent) {
 		const guess = data.guesses[i];
-		const key = (event.target as HTMLButtonElement).getAttribute(
-			'data-key'
-		);
+		const key = (event.target as HTMLButtonElement).getAttribute('data-key');
 
 		if (key === 'backspace') {
 			data.guesses[i] = guess.slice(0, -1);
@@ -85,8 +83,7 @@
 			}
 			await applyAction(result);
 		};
-	}}
->
+	}}>
 	<a class="how-to-play" href="/sverdle/how-to-play">How to play</a>
 
 	<div class="grid" class:playing={!won} class:bad-guess={form?.badGuess}>
@@ -104,8 +101,7 @@
 						class:exact={answer === 'x'}
 						class:close={answer === 'c'}
 						aria-selected={current && column === data.guesses[row].length}
-						value={data.guesses[row]?.[column] ?? ''}
-					/>
+						value={data.guesses[row]?.[column] ?? ''} />
 				{/each}
 			</div>
 		{/each}
@@ -128,8 +124,7 @@
 					data-key="backspace"
 					formaction="?/update"
 					name="key"
-					value="backspace"
-				>
+					value="backspace">
 					back
 				</button>
 
@@ -143,8 +138,7 @@
 								disabled={data.guesses[i].length === 5}
 								formaction="?/update"
 								name="key"
-								value={letter}
-							>
+								value={letter}>
 								{letter}
 							</button>
 						{/each}
@@ -163,8 +157,7 @@
 			stageWidth: window.innerWidth,
 			stageHeight: window.innerHeight,
 			colors: ['#ff3e00', '#40b3ff', '#676778']
-		}}
-	/>
+		}} />
 {/if}
 
 <style>
