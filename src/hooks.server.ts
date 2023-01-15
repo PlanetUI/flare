@@ -1,6 +1,6 @@
 import { SvelteKitAuth } from '@auth/sveltekit';
 import Google from '@auth/core/providers/google';
-import { GOOGLE_ID, GOOGLE_SECRET, SECRET } from '$env/static/private';
+import { GOOGLE_ID, GOOGLE_SECRET } from '$env/static/private';
 import { sequence } from '@sveltejs/kit/hooks';
 import { redirect, type Handle } from '@sveltejs/kit';
 
@@ -18,8 +18,24 @@ const authorization: Handle = async ({ event, resolve }) => {
 
 export const handle: Handle = sequence(
 	SvelteKitAuth({
-		secret: SECRET,
-		providers: [Google({ clientId: GOOGLE_ID, clientSecret: GOOGLE_SECRET })]
+		providers: [Google({ clientId: GOOGLE_ID, clientSecret: GOOGLE_SECRET })],
+		session: {
+			strategy: 'jwt'
+		},
+		jwt: {
+
+		},
+		callbacks: {
+			session: async (data) => {
+				console.log("SESSION", data)
+				return data.session;
+			},
+			jwt: async (data) => {
+				console.log("JWT", data)
+				return data.token;
+			},
+			
+		}
 	}),
 	authorization
 );

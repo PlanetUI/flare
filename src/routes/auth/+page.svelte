@@ -1,7 +1,6 @@
 <script>
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
-	console.log($page.data);
 </script>
 
 <h1>SvelteKit Auth Example</h1>
@@ -14,7 +13,7 @@
 			<small>Signed in as</small><br />
 			<strong>{$page.data.session.user?.name ?? 'User'}</strong>
 		</span>
-		<button on:click={() => signOut('google')} class="button">Sign out</button>
+		<button on:click={() => signOut()} class="button">Sign out</button>
 	{:else}
 		<span class="notSignedInText">You are not signed in</span>
 		<button on:click={() => signIn('google')}>Sign In with Google</button>

@@ -6,7 +6,6 @@
 
 	socket.on('eventFromServer', (message) => {
 		socket_message = message;
-		console.log(message);
 	});
 </script>
 
