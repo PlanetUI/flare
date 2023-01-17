@@ -4,7 +4,7 @@
 declare namespace App {
 	// interface Error {}
 	interface Locals {
-		access_token: string
+		access_token: string;
 	}
 	// interface PageData {}
 	// interface Platform {}

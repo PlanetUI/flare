@@ -22,19 +22,16 @@ export const handle: Handle = sequence(
 		session: {
 			strategy: 'jwt'
 		},
-		jwt: {
-
-		},
+		jwt: {},
 		callbacks: {
 			session: async (data) => {
-				console.log("SESSION", data)
+				console.log('SESSION', data);
 				return data.session;
 			},
 			jwt: async (data) => {
-				console.log("JWT", data)
+				console.log('JWT', data);
 				return data.token;
-			},
-			
+			}
 		}
 	}),
 	authorization
