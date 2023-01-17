@@ -65,7 +65,7 @@ Rent Mentor = User can pay mentor to tech/freely ask him privately
 * Server: Nginx (With sub-process management, Nginx can respond to requests from customers properly. Plus, Nginx is server event based. Which means, the server only responds to requests from users. This of course will save memory. In addition, Nginx can also save computer resources. In other words, Nginx doesn't consume too much RAM. So this can certainly save costs that will be incurred)
 
 
-##Estimation Cost
+## Estimation Cost
 
 * Still cannot determine
 
