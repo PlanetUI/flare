@@ -3,9 +3,7 @@
 // and what to do when importing types
 declare namespace App {
 	// interface Error {}
-	interface Locals {
-		access_token: string;
-	}
+	// interface Locals {}
 	// interface PageData {}
 	// interface Platform {}
 }

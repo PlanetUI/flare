@@ -18,21 +18,9 @@ const authorization: Handle = async ({ event, resolve }) => {
 
 export const handle: Handle = sequence(
 	SvelteKitAuth({
-		providers: [Google({ clientId: env.GOOGLE_ID || '', clientSecret: env.GOOGLE_SECRET || '' })],
-		session: {
-			strategy: 'jwt'
-		},
-		jwt: {},
-		callbacks: {
-			session: async (data) => {
-				console.log('SESSION', data);
-				return data.session;
-			},
-			jwt: async (data) => {
-				console.log('JWT', data);
-				return data.token;
-			}
-		}
+		secret: env.AUTH_SECRET || 'secret',
+		trustHost: false,
+		providers: [Google({ clientId: env.GOOGLE_ID || '', clientSecret: env.GOOGLE_SECRET || '' })]
 	}),
 	authorization
 );
