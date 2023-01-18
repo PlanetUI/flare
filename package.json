@@ -7,6 +7,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"start": "node ./server",
+		"kill": "pm2 del flare",
 		"execute": "pm2 start pnpm --name flare -- start",
 		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

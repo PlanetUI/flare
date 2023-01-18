@@ -30,3 +30,7 @@ jobs:
         run: pnpm lint
       - name: Test build package for deployment
         run: pnpm build
+      - name: copy build files to deploy folder
+        run: cp -r ./build/* ${{ secret.DEPLOY_PATH }}
+      - name: Run Server
+        run: cd ${{ secret.DEPLOY_PATH }} && pnpm execute
