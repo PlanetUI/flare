@@ -31,6 +31,6 @@ jobs:
       - name: Test build package for deployment
         run: pnpm build
       - name: copy build files to deploy folder
-        run: cp -r ./build/* ${{ secret.DEPLOY_PATH }}
+        run: cp -r ./build/* ${{ DEPLOY_PATH }}
       - name: Run Server
-        run: cd ${{ secret.DEPLOY_PATH }} && pnpm execute
+        run: cd ${{ DEPLOY_PATH }} && pnpm execute
