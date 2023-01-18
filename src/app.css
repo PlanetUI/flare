@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply bg-black-3 text-text-1 font-overpass;
+		@apply bg-black-1 text-text-1 font-overpass;
 	}
 	a {
 		@apply hover:text-thame-3 hover:underline;
