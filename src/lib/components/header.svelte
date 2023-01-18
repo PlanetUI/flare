@@ -16,11 +16,11 @@
 					Hi 👋🏻 <strong>{$page.data.session.user?.name ?? 'User'}</strong>
 				</em>
 				<button class="hover:text-thame-3 hover:underline" on:click={() => signOut()}>
-					🚪Logout
+					🚪Keluar
 				</button>
 			{:else}
 				<button class="hover:text-thame-3 hover:underline" on:click={() => signIn('google')}>
-					Sign in with Google
+					Masuk dengan Google 🔓
 				</button>
 			{/if}
 		</nav>
