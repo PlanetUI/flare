@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Practical SvelteKit</title>
+</svelte:head>
+
 <div class="m-auto h-fit">
 	<span class="text-xl font-semibold text-text-2">PRACTICAL</span>
 	<div class="lg:text-7xl text-4xl tracking-widest font-semibold">
