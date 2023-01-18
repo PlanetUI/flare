@@ -16,16 +16,11 @@ jobs:
         node-version: [18.x]
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7
-      - name: Test Install node dependencies
-        run: pnpm i
-      - name: Test ESLint
-        run: pnpm lint
-      - name: Test build package for deployment
-        run: pnpm build
-      - name: copy build files to deploy folder
-        run: cp -r ./build/* ${{ secrets.DEPLOY_PATH }}/build/ && cp -r ./package.json ${{ secrets.DEPLOY_PATH }}/package.json && cp -r ./server/* ${{ secrets.DEPLOY_PATH }}/server/
-      - name: Run Server
-        run: cd ${{ secrets.DEPLOY_PATH }} && pnpm execute
+      - name: Test build docker image
+        run: docker build . -t flare
+      - name: Stop current running docker container
+        run: docker stop flare || true
+      - name: Run docker container
+        run: docker run -d --name flare -p 4173:4173 flare
+      - name: Cleanup dangling docker
+        run: docker image prune -f && docker volume prune -f
