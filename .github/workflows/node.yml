@@ -21,7 +21,7 @@ jobs:
       - name: Stop current running docker container
         run: docker stop flare || true
       - name: Run docker container
-        run: > 
+        run: >
           docker run -d 
           -e GOOGLE_ID=${{ secrets.GOOGLE_ID }} 
           -e GOOGLE_SECRET=${{ secrets.GOOGLE_SECRET }} 
