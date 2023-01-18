@@ -9,8 +9,9 @@ on:
   workflow_dispatch: # Manual trigger deploy from local by command `gh workflow run`
 
 jobs:
-  build:
+  deployment:
     runs-on: self-hosted
+    environment: Production
     strategy:
       matrix:
         node-version: [18.x]
