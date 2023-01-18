@@ -1,6 +1,6 @@
 <footer class="bg-black-2 text-text-1 font-overpass  flex w-full h-16 px-4 shadow font-thin">
 	<div class="m-auto flex w-full">
-		<div class="flex-grow">&copy; Mashanz Software Engineering</div>
+		<div class="flex-grow">&copy; 2021 - 2023 Mashanz Software Engineering</div>
 		<nav class="flex gap-4">
 			<a href="/terms">Terms</a>
 			<span>·</span>
