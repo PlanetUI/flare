@@ -6,29 +6,24 @@ name: Lint and Build
 on:
   push:
     branches: ['master']
-  pull_request:
-    branches: ['master']
   workflow_dispatch: # Manual trigger deploy from local by command `gh workflow run`
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deployment:
+    runs-on: self-hosted
+    environment: Production
     strategy:
       matrix:
         node-version: [18.x]
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
-      - name: Test Install node dependencies
-        run: pnpm i
-      - name: Test ESLint
-        run: pnpm lint
-      - name: Test build package for deployment
-        run: pnpm build
+      - name: Test build docker image
+        run: docker build . -t flare
+      - name: Stop current running docker container
+        run: docker stop flare || true
+      - name: Remove current running docker container
+        run: docker rm flare || true
+      - name: Run docker container
+        run: docker run -d -e GOOGLE_ID=${{ secrets.GOOGLE_ID }} -e GOOGLE_SECRET=${{ secrets.GOOGLE_SECRET }} -e AUTH_SECRET=${{ secrets.AUTH_SECRET }} -e AUTH_TRUST_HOST=${{ secrets.AUTH_TRUST_HOST }} --name flare -p 4173:4173 flare
+      - name: Cleanup dangling docker
+        run: docker image prune -f && docker volume prune -f
