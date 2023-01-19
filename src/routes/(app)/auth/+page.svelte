@@ -12,18 +12,15 @@
 <main class="h-screen w-full overflow-auto flex flex-row py-16 bg-black-3">
 	<p class="m-auto">
 		{#if !$page.data.session}
-			{#if !is_loading}
-				<div class="notSignedInText">You are not signed in</div>
-			{/if}
 			<button
 				class:button={!is_loading}
 				class:button-disable={is_loading}
 				disabled={is_loading}
 				on:click={() => login()}>
 				{#if is_loading}
-					Loading...
+					Memuat halaman...
 				{:else}
-					Sign In with Google
+					Masuk dengan Google
 				{/if}
 			</button>
 		{/if}
