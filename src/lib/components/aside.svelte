@@ -4,7 +4,7 @@
 
 <aside
 	class="bg-black-2 text-text-3 h-full font-overpass pt-16 left-0 z-50 fixed w-64 shadow font-semibold">
-	<nav class="flex flex-col pt-1 h-full">
+	<nav class="flex flex-col h-full">
 		<a
 			class="px-4 py-2 hover:bg-black-1 hover:no-underline"
 			href="/dash"
