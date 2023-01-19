@@ -23,7 +23,12 @@
 					🚪Keluar
 				</button>
 			{:else}
-				<button class="hover:text-thame-3 hover:underline" on:click={() => signIn('google')}>
+				<button
+					class="hover:text-thame-3 hover:underline"
+					on:click={() =>
+						signIn('google', {
+							callbackUrl: '/dash'
+						})}>
 					Masuk dengan Google 🔓
 				</button>
 			{/if}
