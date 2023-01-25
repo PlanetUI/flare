@@ -10,8 +10,14 @@ const server = createServer(app);
 
 const io = new Server(server);
 
+let the_data = {};
 io.on('connection', (socket) => {
 	socket.emit('eventFromServer', 'Hello, World 👋');
+	socket.on('eventFromClient', (data) => {
+		the_data = data;
+		socket.emit('eventFromServer', the_data);
+		console.log('server', the_data);
+	});
 });
 
 // SvelteKit should handle everything else using Express middleware
