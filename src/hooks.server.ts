@@ -4,6 +4,7 @@ import { env } from '$env/dynamic/private';
 import { sequence } from '@sveltejs/kit/hooks';
 import { redirect } from '@sveltejs/kit';
 import type { Handle } from '@sveltejs/kit';
+import { db_insert_user } from '$lib/server/db';
 
 const authorization: Handle = async ({ event, resolve }) => {
 	if (event.url.pathname.startsWith('/dash/')) {
