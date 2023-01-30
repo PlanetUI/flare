@@ -4,7 +4,7 @@ import { env } from '$env/dynamic/private';
 import { sequence } from '@sveltejs/kit/hooks';
 import { redirect } from '@sveltejs/kit';
 import type { Handle } from '@sveltejs/kit';
-import { db_insert_user } from '$lib/server/db';
+import { db_insert_user, db_get_user } from '$lib/server/db';
 
 const authorization: Handle = async ({ event, resolve }) => {
 	if (event.url.pathname.startsWith('/dash/')) {
@@ -12,6 +12,8 @@ const authorization: Handle = async ({ event, resolve }) => {
 		if (!session) {
 			throw redirect(307, '/auth');
 		}
+	} else {
+		//check_user_login
 	}
 
 	const result = await resolve(event);
