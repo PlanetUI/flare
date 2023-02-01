@@ -1,5 +1,5 @@
 <script>
-	import tilt from '../../other/tilt';
+	import tilt from '$lib/tilt.js';
 
 	let reverse = false;
 </script>
