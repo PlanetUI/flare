@@ -9,8 +9,7 @@
 				<div class="m-auto">
 					<span class="text-xl font-semibold text-text-2">PRACTICAL</span>
 					<div class="md:text-7xl text-4xl tracking-widest font-semibold">
-						<!-- <span class="text-text-1">SVELTE</span><span class=" pl-1 text-text-3">KIT</span> -->
-						<span class="text-text-1">kamil</span><span class=" pl-1 text-text-3">KIT</span>
+						<span class="text-text-1">SVELTE</span><span class=" pl-1 text-text-3">KIT</span>
 					</div>
 					<div class="py-2 text-text-2 text-2xl">belajar menjadi fullstack engineer</div>
 					<div class="pt-5">
