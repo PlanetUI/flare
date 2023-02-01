@@ -1,3 +1,9 @@
+<script>
+	import tilt from '../../other/tilt';
+
+	let reverse = false;
+</script>
+
 <svelte:head>
 	<title>Practical SvelteKit</title>
 </svelte:head>
@@ -22,7 +28,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex">
+			<div class="flex" use:tilt={{ scale: 1.1, reverse }}>
 				<img class="m-auto w-32 h-32 md:w-72 md:h-72 rounded-full" src="/svelte.png" alt="Logos" />
 			</div>
 		</div>
