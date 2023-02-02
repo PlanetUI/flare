@@ -15,7 +15,10 @@
 		"test:unit": "vitest",
 		"coverage": "npx vitest run --coverage",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"story:dev": "histoire dev",
+		"story:build": "histoire build",
+		"story:preview": "histoire preview"
 	},
 	"devDependencies": {
 		"@auth/core": "0.3.0",
@@ -35,6 +38,7 @@
 		"eslint-config-prettier": "8.6.0",
 		"eslint-plugin-svelte3": "4.0.0",
 		"express": "4.18.2",
+		"histoire": "^0.12.4",
 		"jsdom": "21.1.0",
 		"mongodb": "4.13.0",
 		"pm2": "5.2.2",
