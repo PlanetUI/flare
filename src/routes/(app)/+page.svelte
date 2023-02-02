@@ -8,6 +8,7 @@
 	let y = 0;
 </script>
 
+<svelte:window bind:scrollY={y} />
 <svelte:head>
 	<title>Practical SvelteKit</title>
 </svelte:head>
@@ -42,7 +43,10 @@
 				</div>
 			</div>
 			<div class="flex" use:tilt={{ scale: 1.1, reverse }}>
-				<img class="m-auto w-32 h-32 md:w-72 md:h-72 rounded-full" src="/svelte.png" alt="Logos" />
+				<img
+					class="m-auto w-32 h-32 md:w-72 md:h-72 rounded-full logo-svelte"
+					src="/svelte.png"
+					alt="Logos" />
 			</div>
 		</div>
 	</div>
@@ -50,18 +54,21 @@
 
 <style>
 	.parallax-container {
+		opacity: 40%;
 		position: fixed;
-		width: 1280px;
-		/* height: 100%; */
+		width: 100%;
+		/* height: 100px; */
 		left: 50%;
 		transform: translate(-50%, 0);
+		z-index: -1;
 	}
 
 	.parallax-container img {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		width: auto;
+		height: 900px;
 		will-change: transform;
 	}
 
@@ -72,36 +79,8 @@
 		height: 100%;
 		background: rgb(45, 10, 13);
 	}
-
-	.text {
-		position: relative;
-		width: 100%;
-		height: 250vh;
-		color: rgb(10, 10, 10);
-		text-align: center;
-		padding: 4em 0.5em 0.5em 0.5em;
-		box-sizing: border-box;
-		pointer-events: none;
-	}
-
-	.foreground {
-		position: absolute;
-		top: 440px;
-		left: 0;
-		width: 100%;
-		height: calc(100% - 712px);
-		background-color: rgb(10, 10, 10);
-		color: white;
-		padding: 50vh 0 0 0;
-	}
-
-	:global(body) {
-		margin: 0;
-		padding: 0;
-		background-color: rgb(10, 10, 10);
-	}
 	/*  */
-	img {
+	.logo-svelte {
 		box-shadow: 0px 0px 2000px 10px hsl(15 100% 40%);
 	}
 
