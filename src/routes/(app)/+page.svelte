@@ -13,11 +13,12 @@
 	<title>Practical SvelteKit</title>
 </svelte:head>
 
-<main class="h-screen w-full overflow-auto flex flex-row py-16 bg-black-3">
-	<div class="parallax-container">
+<main class="h-screen w-full overflow-auto flex flex-col pt-16 bg-black-3">
+	<div class="parallax-container" style={`width: ${3000}px; height:${1038}px`}>
 		{#each layers as layer}
 			<!-- svelte-ignore a11y-missing-attribute -->
 			<img
+				class:hidden={layer === 3}
 				style="transform: translate(0,{(-y * layer) / (layers.length - 1)}px)"
 				src="/layer/{layer}.png" />
 			<!-- alt="parallax layer {layer}" -->
@@ -52,12 +53,14 @@
 	</div>
 </main>
 
+<div class=" bg-black-1 text-thame-1 h-screen flex">
+	<div class="m-auto text-5xl font-bold">COMMING SOON!</div>
+</div>
+
 <style>
 	.parallax-container {
 		opacity: 40%;
 		position: fixed;
-		width: 100%;
-		/* height: 100px; */
 		left: 50%;
 		transform: translate(-50%, 0);
 		z-index: -1;

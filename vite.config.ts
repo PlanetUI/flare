@@ -8,7 +8,7 @@ const config: UserConfig = {
 	plugins: [sveltekit()],
 	test: {
 		globals: true,
-		environment: "jsdom",
+		environment: 'jsdom',
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	},
 	server: {
