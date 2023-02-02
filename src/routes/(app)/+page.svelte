@@ -16,10 +16,11 @@
 <main class="h-screen w-full overflow-auto flex flex-row py-16 bg-black-3">
 	<div class="parallax-container">
 		{#each layers as layer}
+			<!-- svelte-ignore a11y-missing-attribute -->
 			<img
 				style="transform: translate(0,{(-y * layer) / (layers.length - 1)}px)"
-				src="/layer/{layer}.png"
-				alt="parallax layer {layer}" />
+				src="/layer/{layer}.png" />
+			<!-- alt="parallax layer {layer}" -->
 		{/each}
 	</div>
 	<div class="m-auto h-fit p-4">
