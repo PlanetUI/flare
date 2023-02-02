@@ -20,7 +20,7 @@
 			<img
 				class:hidden={layer === 3}
 				style="transform: translate(0,{(-y * layer) / (layers.length - 1)}px)"
-				src="/layer/{layer}.png" />
+				src="/layer/{layer}.webp" />
 			<!-- alt="parallax layer {layer}" -->
 		{/each}
 	</div>
