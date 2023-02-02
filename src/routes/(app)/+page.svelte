@@ -1,7 +1,11 @@
 <script>
+	// tilt effect
 	import tilt from '$lib/tilt.js';
-
 	let reverse = false;
+
+	// animation  scroll
+	const layers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	let y = 0;
 </script>
 
 <svelte:head>
@@ -9,6 +13,15 @@
 </svelte:head>
 
 <main class="h-screen w-full overflow-auto flex flex-row py-16 bg-black-3">
+	<!--  -->
+	<div class="parallax-container">
+		{#each layers as layer}
+			<img
+				style="transform: translate(0,{(-y * layer) / (layers.length - 1)}px)"
+				src="/layer/{layer}.png"
+				alt="parallax layer {layer}" />
+		{/each}
+	</div>
 	<div class="m-auto h-fit p-4">
 		<div class="grid grid-cols-2 md:gap-24">
 			<div class="flex">
@@ -36,6 +49,58 @@
 </main>
 
 <style>
+	.parallax-container {
+		position: fixed;
+		width: 1280px;
+		/* height: 100%; */
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	.parallax-container img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		will-change: transform;
+	}
+
+	.parallax-container img:last-child::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgb(45, 10, 13);
+	}
+
+	.text {
+		position: relative;
+		width: 100%;
+		height: 250vh;
+		color: rgb(10, 10, 10);
+		text-align: center;
+		padding: 4em 0.5em 0.5em 0.5em;
+		box-sizing: border-box;
+		pointer-events: none;
+	}
+
+	.foreground {
+		position: absolute;
+		top: 440px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 712px);
+		background-color: rgb(10, 10, 10);
+		color: white;
+		padding: 50vh 0 0 0;
+	}
+
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		background-color: rgb(10, 10, 10);
+	}
+	/*  */
 	img {
 		box-shadow: 0px 0px 2000px 10px hsl(15 100% 40%);
 	}
