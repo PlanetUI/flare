@@ -12,8 +12,6 @@ const authorization: Handle = async ({ event, resolve }) => {
 		if (!session) {
 			throw redirect(307, '/auth');
 		}
-	} else {
-		//check_user_login
 	}
 
 	const result = await resolve(event);
