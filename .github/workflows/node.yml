@@ -24,6 +24,6 @@ jobs:
       - name: Remove current running docker container
         run: docker rm flare || true
       - name: Run docker container
-        run: docker run -d --restart=always -e GOOGLE_ID=${{ secrets.GOOGLE_ID }} -e GOOGLE_SECRET=${{ secrets.GOOGLE_SECRET }} -e AUTH_SECRET=${{ secrets.AUTH_SECRET }} -e AUTH_TRUST_HOST=${{ secrets.AUTH_TRUST_HOST }} --name flare -p 4173:4173 flare
+        run: docker run -d --restart=always -e DATABASE_URL=${{ secrets.DATABASE_URL }} -e GOOGLE_ID=${{ secrets.GOOGLE_ID }} -e GOOGLE_SECRET=${{ secrets.GOOGLE_SECRET }} -e AUTH_SECRET=${{ secrets.AUTH_SECRET }} -e AUTH_TRUST_HOST=${{ secrets.AUTH_TRUST_HOST }} --name flare -p 4173:4173 flare
       - name: Cleanup dangling docker
         run: docker image prune -f && docker volume prune -f
