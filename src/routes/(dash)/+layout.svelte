@@ -1,7 +1,7 @@
 <script>
 	import '$lib/app.css';
-	import Header from '$lib/components/header.svelte';
 	import Aside from '$lib/components/aside.svelte';
+	import Header from '$lib/components/header.svelte';
 </script>
 
 <Header />

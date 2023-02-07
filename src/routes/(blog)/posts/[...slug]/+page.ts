@@ -1,6 +1,6 @@
-import type { PageLoad } from './$types';
 import { slugFromPath } from '$lib/slugFromPath';
 import { error } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
 	const modules = import.meta.glob(`/src/posts/**/*.{md,svx,svelte.md}`);

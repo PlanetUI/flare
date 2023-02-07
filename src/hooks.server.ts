@@ -1,10 +1,10 @@
-import { SvelteKitAuth } from '@auth/sveltekit';
-import Google from '@auth/core/providers/google';
 import { env } from '$env/dynamic/private';
-import { sequence } from '@sveltejs/kit/hooks';
-import { redirect } from '@sveltejs/kit';
-import type { Handle } from '@sveltejs/kit';
 import { db_get_user } from '$lib/server/db';
+import Google from '@auth/core/providers/google';
+import { SvelteKitAuth } from '@auth/sveltekit';
+import type { Handle } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
+import { sequence } from '@sveltejs/kit/hooks';
 
 const authorization: Handle = async ({ event, resolve }) => {
 	if (event.url.pathname.startsWith('/dash/')) {

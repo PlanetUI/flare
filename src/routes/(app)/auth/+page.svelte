@@ -1,6 +1,6 @@
 <script>
-	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
+	import { signIn } from '@auth/sveltekit/client';
 	$: is_loading = false;
 
 	function login() {
