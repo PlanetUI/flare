@@ -1,0 +1,59 @@
+---
+title: 'The Second!'
+description: 'Second Post.'
+author: 'Hans'
+date: '2022-02-07'
+published: true
+---
+
+# Headeing 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+This is the second post of my blog. I hope you like it!
+
+`one line code`
+
+```js
+// multi line of code
+const a = 1;
+const b = 2;
+const c = a + b;
+
+function add(a, b) {
+	return a + b;
+}
+```
+
+> This is a quote
+
+- list item 1
+- list item 2
+- list item 3
+
+1. list item 1
+   - list item 1
+   - list item 2
+2. list item 2
+3. list item 3
+
+- ⬜️ uncheck
+- ✅ check
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Row 1    | Row 1    | Row 1    |
+| Row 2    | Row 2    | Row 2    |
+| Row 3    | Row 3    | Row 3    |
+
+[Link to Google](https://www.google.com)
+
+![Image](/favicon.png)

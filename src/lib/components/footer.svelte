@@ -11,3 +11,9 @@
 		</nav>
 	</div>
 </footer>
+
+<style lang="postcss">
+	a {
+		@apply !text-white hover:!text-thame-3;
+	}
+</style>

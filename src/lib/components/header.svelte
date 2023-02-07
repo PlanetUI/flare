@@ -28,3 +28,9 @@
 		</nav>
 	</div>
 </header>
+
+<style lang="postcss">
+	a {
+		@apply !text-white hover:!text-thame-3;
+	}
+</style>

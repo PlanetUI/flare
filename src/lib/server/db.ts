@@ -9,7 +9,7 @@ export async function db_get_user(document: Document) {
 
 	// get db and collection
 	const db = client.db(`${import.meta.env.MODE}_flare`);
-	const doc = db.collection("users");
+	const doc = db.collection('users');
 
 	// check if user exists, if not, create/update it
 	await doc.updateOne({ email: document.email }, { $set: document }, { upsert: true });

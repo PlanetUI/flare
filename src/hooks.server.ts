@@ -13,7 +13,7 @@ const authorization: Handle = async ({ event, resolve }) => {
 			throw redirect(307, '/auth');
 		} else {
 			// get user from db, if not available, create it
-			await db_get_user({name: session?.user?.name, email: session.user?.email});
+			await db_get_user({ name: session?.user?.name, email: session.user?.email });
 		}
 	}
 
