@@ -37,7 +37,7 @@
 		"highlight.js": "11.7.0",
 		"jsdom": "21.1.0",
 		"mdsvex": "0.10.6",
-		"mongodb": "5.0.0",
+		"mongodb": "5.0.1",
 		"pm2": "5.2.2",
 		"postcss": "8.4.21",
 		"postgres": "3.3.3",
