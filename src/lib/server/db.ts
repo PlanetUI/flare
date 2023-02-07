@@ -1,10 +1,10 @@
 import { MongoClient } from 'mongodb';
 import type { Document } from 'mongodb';
-import { DATABASE_URL } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export async function db_get_user(document: Document) {
 	// connect to db
-	const client = new MongoClient(DATABASE_URL);
+	const client = new MongoClient(env.DATABASE_URL);
 	await client.connect();
 
 	// get db and collection
