@@ -23,6 +23,7 @@
 	"devDependencies": {
 		"@auth/core": "0.3.0",
 		"@auth/sveltekit": "0.2.0",
+		"@histoire/plugin-svelte": "^0.12.4",
 		"@playwright/test": "1.30.0",
 		"@prisma/client": "4.9.0",
 		"@sveltejs/adapter-node": "1.1.4",

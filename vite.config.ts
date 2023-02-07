@@ -16,6 +16,9 @@ const config: UserConfig = {
 	},
 	preview: {
 		host: true
+	},
+	define: {
+		__SVELTEKIT_APP_VERSION_POLL_INTERVAL__: 1000
 	}
 };
 

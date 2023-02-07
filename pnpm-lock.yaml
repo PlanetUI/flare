@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@auth/core': 0.3.0
   '@auth/sveltekit': 0.2.0
+  '@histoire/plugin-svelte': ^0.12.4
   '@playwright/test': 1.30.0
   '@prisma/client': 4.9.0
   '@sveltejs/adapter-node': 1.1.4
@@ -40,6 +41,7 @@ specifiers:
 devDependencies:
   '@auth/core': 0.3.0
   '@auth/sveltekit': 0.2.0_v6fhkc6vsocij4ilceaqsvkmfe
+  '@histoire/plugin-svelte': 0.12.4_76dbu7m65vjnozzv4fj7qep6aq
   '@playwright/test': 1.30.0
   '@prisma/client': 4.9.0_prisma@4.9.0
   '@sveltejs/adapter-node': 1.1.4_@sveltejs+kit@1.3.1
@@ -1253,6 +1255,21 @@ packages:
       '@codemirror/theme-one-dark': 6.1.0
       '@codemirror/view': 6.7.3
       '@histoire/vendors': 0.12.4
+    dev: true
+
+  /@histoire/plugin-svelte/0.12.4_76dbu7m65vjnozzv4fj7qep6aq:
+    resolution: {integrity: sha512-/bM5caUOjQ/vf6n4AVaGgHK5Z3yJvEF+SMp1KFDTBFqUFWbaC2d0sHNpuKJP8ilhfvtZVKBLdjRltbnT/+4gNQ==}
+    peerDependencies:
+      histoire: ^0.12.4
+      svelte: ^3.0.0
+    dependencies:
+      '@histoire/controls': 0.12.4
+      '@histoire/shared': 0.12.4_vite@4.0.4
+      '@histoire/vendors': 0.12.4
+      histoire: 0.12.4_vite@4.0.4
+      svelte: 3.55.1
+    transitivePeerDependencies:
+      - vite
     dev: true
 
   /@histoire/shared/0.12.4_vite@4.0.4:
