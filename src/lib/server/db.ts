@@ -4,7 +4,7 @@ import { MongoClient } from 'mongodb';
 
 export async function db_get_user(document: Document) {
 	// connect to db
-	const client = new MongoClient(env.DATABASE_URL);
+	const client = new MongoClient(env.DATABASE_URL || "");
 	await client.connect();
 
 	// get db and collection
