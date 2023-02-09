@@ -36,7 +36,7 @@
 					<div class="pt-5">
 						<a
 							data-sveltekit-preload-data="hover"
-							href="/dash"
+							href="/dash/learn"
 							class="hover:no-underline hover:text-text-1 hover:bg-thame-1-variant bg-thame-1 px-4 py-3 rounded text-xl text-white">
 							mulai belajar ➡
 						</a>
@@ -54,7 +54,7 @@
 </main>
 
 <div class=" bg-black-1 text-thame-1 h-screen flex">
-	<div class="m-auto text-5xl font-bold">COMMING SOON!</div>
+	<div class="m-auto text-5xl font-bold">COMING SOON!</div>
 </div>
 
 <style>

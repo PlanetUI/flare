@@ -5,14 +5,19 @@
 <aside
 	class="bg-black-2 text-text-3 h-full font-overpass pt-16 left-0 z-50 hidden md:block fixed w-44">
 	<nav class="flex flex-col h-full">
-		<a class="menu" href="/dash" class:active={$page.url.pathname === '/dash'}> 🏠 BERANDA </a>
+		<a class="menu hidden" href="/dash" class:active={$page.url.pathname === '/dash'}>
+			🏠 BERANDA
+		</a>
 		<a
-			class="menu"
+			class="menu hidden"
 			href="/dash/curriculum"
 			class:active={$page.url.pathname.startsWith('/dash/curriculum')}>
 			📖 KURIKULUM
 		</a>
-		<a class="menu" href="/dash/mod" class:active={$page.url.pathname.startsWith('/dash/mod')}>
+		<a
+			class="menu hidden"
+			href="/dash/mod"
+			class:active={$page.url.pathname.startsWith('/dash/mod')}>
 			📦 MODULE
 		</a>
 		<a class="menu" href="/dash/learn" class:active={$page.url.pathname.startsWith('/dash/learn')}>
