@@ -25,7 +25,7 @@
 		</a>
 		<div class="flex-grow" />
 		<a
-			class="menu"
+			class="menu hidden"
 			href="/dash/settings"
 			class:active={$page.url.pathname.startsWith('/dash/settings')}>
 			⚙️ PENGATURAN
