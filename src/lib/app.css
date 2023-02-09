@@ -4,27 +4,27 @@
 
 @layer base {
 	h1 {
-		@apply text-5xl font-bold text-thame-1;
+		@apply text-5xl font-bold text-thame-1-variant;
 	}
 
 	h2 {
-		@apply text-4xl font-bold text-thame-1;
+		@apply text-4xl font-bold text-thame-1-variant py-4;
 	}
 
 	h3 {
-		@apply text-3xl font-bold text-thame-1;
+		@apply text-3xl font-bold text-thame-1-variant py-4;
 	}
 
 	h4 {
-		@apply text-2xl font-bold text-thame-1;
+		@apply text-2xl font-bold text-thame-1-variant py-4;
 	}
 
 	h5 {
-		@apply text-xl font-bold text-thame-1;
+		@apply text-xl font-bold text-thame-1-variant py-4;
 	}
 
 	h6 {
-		@apply text-lg font-bold text-thame-1;
+		@apply text-lg font-bold text-thame-1-variant py-4;
 	}
 
 	html {
@@ -32,7 +32,7 @@
 	}
 
 	p {
-		@apply text-text-2 py-1;
+		@apply text-text-3 py-1;
 	}
 
 	body {

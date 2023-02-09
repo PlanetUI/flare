@@ -1,0 +1,37 @@
+---
+title: 'Membuat Projek NodeJS dari dasar banget banget'
+thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'
+description: 'Belajar bagaimana membuat projek NodeJS dari awal dan penjelasan struktur project NodeJS.'
+author: 'Hans'
+date: '2022-02-09'
+published: true
+---
+
+<script>
+    import Filename from '$lib/components/filename.svelte';
+</script>
+
+# Membuat Projek NodeJS
+
+NodeJS merupakan runtime JavaScript dibuat di atas V8 JavaScript Engine milik Chrome.
+NodeJS dapat digunakan untuk membuat aplikasi web, aplikasi mobile, aplikasi CLI, dan aplikasi desktop.
+
+Untuk memulai membuat project NodeJS. Pastikan NodeJS sudah terinstall di komputer anda.
+
+## 1. Instalasi NodeJS
+
+Untuk instalasi NodeJS dapat dilihat di [sini](https://nodejs.org/en/download/).
+
+## 2. Membuat Project
+
+Untuk membuat project NodeJS, buka terminal atau command prompt dan ketikkan perintah berikut:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+mkdir belajar-nodejs
+cd belajar-nodejs
+npm init -y
+```
+
+setelah itu akan muncul file `package.json` di dalam folder `belajar-nodejs`.

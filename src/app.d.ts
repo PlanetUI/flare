@@ -17,6 +17,7 @@ declare namespace App {
 	interface BlogPost {
 		slug: string;
 		title: string;
+		thumbnail: string;
 		author: string;
 		description: string;
 		date: string;
