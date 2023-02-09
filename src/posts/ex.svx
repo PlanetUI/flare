@@ -6,6 +6,10 @@ date: '2022-02-07'
 published: true
 ---
 
+<script>
+   import Filename from '$lib/components/filename.svelte';
+</script>
+
 # Headeing 1
 
 ## Heading 2
@@ -22,6 +26,8 @@ This is the second post of my blog. I hope you like it!
 
 `one line code`
 
+<Filename logo="/favicon.png" name="index.js" />
+
 ```js
 // multi line of code
 const a = 1;
@@ -31,6 +37,8 @@ const c = a + b;
 function add(a, b) {
 	return a + b;
 }
+
+console.log(add(a, b)); // this is some comments that have long text in it.
 ```
 
 > This is a quote

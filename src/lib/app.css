@@ -32,7 +32,7 @@
 	}
 
 	p {
-		@apply text-text-1 py-1;
+		@apply text-text-2 py-1;
 	}
 
 	body {
@@ -60,7 +60,7 @@
 	}
 
 	table > thead > tr > th {
-		@apply border border-text-1 bg-black-2 text-thame-1 p-2;
+		@apply border border-text-1 bg-black-1 text-thame-1 p-2;
 	}
 
 	table > tbody > tr > td {
@@ -69,5 +69,13 @@
 
 	blockquote {
 		@apply border-l-4 border-thame-3 italic p-2 bg-thame-3 bg-opacity-10 text-text-3;
+	}
+
+	pre {
+		@apply border border-thame-1-variant mb-2 rounded-b-lg rounded-r-lg;
+	}
+
+	pre > code {
+		@apply rounded-b-lg rounded-r-lg;
 	}
 }
