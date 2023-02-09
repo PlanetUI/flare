@@ -6,6 +6,6 @@
 
 <Header />
 <Aside />
-<main class="h-screen w-full overflow-auto flex flex-row pl-44 py-16 bg-black-3">
+<main class="h-screen w-full overflow-auto flex flex-row md:pl-44 pt-16 bg-black-3">
 	<slot />
 </main>
