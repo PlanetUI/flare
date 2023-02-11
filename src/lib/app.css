@@ -44,11 +44,11 @@
 	}
 
 	ul {
-		@apply list-disc list-inside pl-8 py-1;
+		@apply list-disc list-inside pl-8 py-1 text-text-3;
 	}
 
 	ol {
-		@apply list-decimal list-inside pl-8 py-1;
+		@apply list-decimal list-inside pl-8 py-1 text-text-3;
 	}
 
 	p > code {
@@ -69,6 +69,12 @@
 
 	blockquote {
 		@apply border-l-4 border-thame-3 italic p-2 bg-thame-3 bg-opacity-10 text-text-3;
+	}
+
+	blockquote > p,
+	ul,
+	ol {
+		@apply text-text-2;
 	}
 
 	pre {

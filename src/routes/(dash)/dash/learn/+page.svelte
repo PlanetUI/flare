@@ -9,7 +9,9 @@
 			<a
 				href={'/dash/learn/posts/' + slug}
 				class=" bg-black-1 h-min rounded-lg hover:outline hover:outline-thame-1-variant">
-				<img class=" rounded-t-lg" src={thumbnail} alt={slug} />
+				<div class="flex h-64">
+					<img class="m-auto" src={thumbnail} alt={slug} />
+				</div>
 				<div class="p-4">
 					<h5 class="text-thame-1">{title}</h5>
 					<div class=" text-thame-3 text-sm font-mono">{author} {date}</div>

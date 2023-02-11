@@ -1,6 +1,6 @@
 ---
-title: 'Membuat Projek NodeJS dari dasar banget banget'
-thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png'
+title: 'Mempersiapkan Environment Scalable NodeJS Project. (Basic)'
+thumbnail: 'https://nodejs.org/static/images/logo.svg'
 description: 'Belajar bagaimana membuat projek NodeJS dari awal dan penjelasan struktur project NodeJS.'
 author: 'Hans'
 date: '2022-02-09'
@@ -20,9 +20,112 @@ Untuk memulai membuat project NodeJS. Pastikan NodeJS sudah terinstall di komput
 
 ## 1. Instalasi NodeJS
 
-Untuk instalasi NodeJS dapat dilihat di [sini](https://nodejs.org/en/download/).
+Untuk pengguna Linux/Ubuntu atau MacOS, NodeJS dapat diinstall dengan menggunakan package manager.
 
-## 2. Membuat Project
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="Linux/Ubuntu Terminal" />
+
+```bash
+sudo apt install nodejs
+```
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="MacOs Terminal" />
+
+```bash
+brew install nodejs
+```
+
+> Khusus pengguna Windows, kami rekomendasikan untuk menggunakan `Windows Subsystem for Linux (WSL)` dan menggunakan base OS Ubuntu untuk installasi `NodeJS`
+
+## 2. Instalasi Node Version Manager
+Node Version Manager adalah version manager untuk NodeJS. Version Manager dapat digunakan untuk menginstall, mengupdate, dan menghapus versi NodeJS yang terinstall.
+
+> Mengapa Perlu Version Manager?
+- Saat belajar, banyak tutorial yang menggunakan NodeJS dengan versi bermacam2, contoh nya tutorial lama ada yang masih menggunakan versi node versi 8 dan tutorial terbaru menggunakan versi terbaru yaitu node versi 19.
+- Saat menggunakan library 3rd Party, library tersebut mungkin tidak kompatibel dengan versi NodeJS yang digunakan.
+- Saat mengerjakan project yang sudah lama, project tersebut mungkin menggunakan versi NodeJS yang sudah lama dan tidak lagi didukung oleh versi NodeJS terbaru.
+
+Oleh karena itu dengan version manager, kita dapat menginstall beberapa versi NodeJS di komputer kita. Dan kita dapat mengganti versi NodeJS yang digunakan dengan mudah.
+Ada banyak version manager di luar sana namun kami rekomendasikan `n` karena `n` adalah version manager yang paling ringan dan mudah digunakan.
+
+Berikut adalah cara installasi `n` untuk node version manager.
+
+Set dulu requirement environment nya.
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+# Buat folder cache (bila tidak ada) dan ambil alih kepemilikan.
+sudo mkdir -p /usr/local/n
+sudo chown -R $(whoami) /usr/local/n
+
+# Pastikan folder-folder berikut ada. (aman di eksekusi walaupun folder sudah ada)
+sudo mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+
+# Ambil alih kepemilikan folder installasi Node.JS berikut.
+sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+```
+
+Kemudian install `n` node version manager
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+curl -L https://bit.ly/n-install | bash
+```
+
+Setelah itu check installasi `n` dengan run command berikut untuk mengechek versi `n` yang terinstall. Apabila tidak ada error maka `n` sudah terinstall dengan baik.
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+n --version
+```
+
+Kemudian kita bisa gunakan versi node yang di inginkan.
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+# untuk gunakan node versi (Long Time Support) LTS
+n lts
+
+# untuk gunakan node versi spesifik, contoh versi 18
+n 19
+```
+
+Terakhir adalah check node version nya, apabila telah terpilih versi node yang diinginkan maka versi node yang terpilih akan terlihat di terminal.
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+node -v
+```
+
+## 3. Instalasi Node Package Manager
+
+Node Package Manager adalah package manager untuk NodeJS. Package manager dapat digunakan untuk menginstall, mengupdate, dan menghapus package/package yang terinstall.
+
+> Mengapa Perlu Package Manager?<br/>
+Dalam 1 environment tidak bisa menginstall package/package yang sama.
+Apabila kita menginstall package/package yang sama maka akan terjadi error.
+Oleh karena itu kita membutuhkan package manager untuk menginstall, mengupdate, dan menghapus package/package yang terinstall.
+
+> Contoh kasus:<br/>
+Ketika kita memiliki banyak project NodeJS, Project A butuh library x versi 1 sedangkan project B butuh library x versi 2. Hal ini tidak bisa dilakukan dalam 1 environment.
+Oleh karena itu diperlukan package manager agar dapat menginstall berbagai versi library dalam 1 environment nodejs.
+
+Node Package Manager ini sudah terinstall secara default pada project node dan memiliki nama `npm`. Namun kami tidak merekomendasikan menggunakan `npm` karena storage management nya yang buruk.
+Oleh karena itu kami merekomendasikan menggunakan `pnpm` yang merupakan package manager yang ringan dan memiliki storage management yang baik.
+
+untuk menginstall `pnpm` silahkan run command berikut:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+npm install -g pnpm
+```
+
+## 4. Membuat Project
 
 Untuk membuat project NodeJS, buka terminal atau command prompt dan ketikkan perintah berikut:
 
@@ -31,7 +134,51 @@ Untuk membuat project NodeJS, buka terminal atau command prompt dan ketikkan per
 ```bash
 mkdir belajar-nodejs
 cd belajar-nodejs
-npm init -y
+pnpm init -y
 ```
 
 setelah itu akan muncul file `package.json` di dalam folder `belajar-nodejs`.
+
+Kemudian buatlah file `index.js` di dalam folder `belajar-nodejs` dan isi file tersebut dengan kode berikut:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="index.js" />
+
+```javascript
+console.log("Hello World")
+```
+
+Untuk menjalankan file javascript dengan NodeJS, jalankan command berikut:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+node index.js
+```
+
+namun, dengan command ini, anda menggunakan environment default untuk menjalankan project NodeJS ini.
+Dengan mempertimbangan masalah sebelum nya yaitu 1 environment tidak dapat di install dengan bermacam versi library bersamaan.
+Maka perlu menjalankan project NodeJS ini dalam environment berbeda dengan default.
+
+cara nya dengan mengubah script `package.json` dan tambahkan code berikut di dalam parameter `script`
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="package.json" />
+
+```json
+{
+    ...
+    "script": {
+        "start": "node index.js"
+    },
+    ...
+}
+```
+
+kemudian jalankan script tersebut dengan environment yg berbeda dari default:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+pnpm start
+```
+
+> Selamat! Anda berhasil membuat project NodeJS yang scalable. (basic)
