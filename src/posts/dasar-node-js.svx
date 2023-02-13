@@ -25,12 +25,14 @@ Untuk pengguna Linux/Ubuntu atau MacOS, NodeJS dapat diinstall dengan menggunaka
 <Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="Linux/Ubuntu Terminal" />
 
 ```bash
+sudo apt update
 sudo apt install nodejs
 ```
 
 <Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="MacOs Terminal" />
 
 ```bash
+brew update
 brew install nodejs
 ```
 
