@@ -3,8 +3,8 @@ title: 'Mempersiapkan Environment Scalable NodeJS Project. (Basic)'
 thumbnail: 'https://nodejs.org/static/images/logo.svg'
 description: 'Belajar bagaimana membuat projek NodeJS dari awal dan penjelasan struktur project NodeJS.'
 author: 'Hans'
-published_at: '2022-02-09'
-updated_at: '2022-02-14'
+published_at: '2023-02-09'
+updated_at: '2023-02-14'
 published: true
 ---
 
