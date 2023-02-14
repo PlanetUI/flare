@@ -3,7 +3,8 @@ title: 'Mempersiapkan Environment Scalable NodeJS Project. (Basic)'
 thumbnail: 'https://nodejs.org/static/images/logo.svg'
 description: 'Belajar bagaimana membuat projek NodeJS dari awal dan penjelasan struktur project NodeJS.'
 author: 'Hans'
-date: '2022-02-09'
+published_at: '2022-02-09'
+updated_at: '2022-02-14'
 published: true
 ---
 
@@ -11,7 +12,7 @@ published: true
     import Filename from '$lib/components/filename.svelte';
 </script>
 
-# Membuat Projek NodeJS
+# Mempersiapkan Environment Scalable NodeJS Project. (Basic)
 
 NodeJS merupakan runtime JavaScript dibuat di atas V8 JavaScript Engine milik Chrome.
 NodeJS dapat digunakan untuk membuat aplikasi web, aplikasi mobile, aplikasi CLI, dan aplikasi desktop.
@@ -139,7 +140,7 @@ cd belajar-nodejs
 pnpm init -y
 ```
 
-setelah itu akan muncul file `package.json` di dalam folder `belajar-nodejs`.
+Setelah itu akan muncul file `package.json` di dalam folder `belajar-nodejs`.
 
 Kemudian buatlah file `index.js` di dalam folder `belajar-nodejs` dan isi file tersebut dengan kode berikut:
 
@@ -157,7 +158,7 @@ Untuk menjalankan file javascript dengan NodeJS, jalankan command berikut:
 node index.js
 ```
 
-namun, dengan command ini, anda menggunakan environment default untuk menjalankan project NodeJS ini.
+Namun, dengan command ini, anda menggunakan environment default untuk menjalankan project NodeJS ini.
 Dengan mempertimbangan masalah sebelum nya yaitu 1 environment tidak dapat di install dengan bermacam versi library bersamaan.
 Maka perlu menjalankan project NodeJS ini dalam environment berbeda dengan default.
 

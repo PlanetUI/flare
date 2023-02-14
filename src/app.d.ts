@@ -20,7 +20,8 @@ declare namespace App {
 		thumbnail: string;
 		author: string;
 		description: string;
-		date: string;
 		published: boolean;
+		published_at: string;
+		updated_at: string;
 	}
 }
