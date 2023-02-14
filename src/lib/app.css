@@ -56,7 +56,7 @@
 	}
 
 	table {
-		@apply border-collapse border border-text-3 bg-black-3;
+		@apply border-collapse border border-text-3 bg-black-3 my-4;
 	}
 
 	table > thead > tr > th {
