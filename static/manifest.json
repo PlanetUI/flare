@@ -1,0 +1,19 @@
+{
+	"name": "Mashanz Software Engineering Learning App",
+	"short_name": "mashanz",
+	"theme_color": "#1e88e5",
+	"background_color": "#3E82F7",
+	"display": "standalone",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "/favicon.png",
+			"sizes": "225x225"
+		},
+		{
+			"src": "/favicon.png",
+			"sizes": "225x225",
+			"purpose": "maskable"
+		}
+	]
+}
