@@ -16,7 +16,7 @@
 </div>
 
 <blockquote
-	class="bg-gray-500 bg-opacity-20 border-l-4 border-l-gray-500 text-text-2 font-mono not-italic text-sm">
+	class="bg-gray-500 bg-opacity-20 border-l-4 border-l-gray-500 text-text-2 font-mono not-italic text-xs">
 	Published At&nbsp;: {data.frontmatter?.published_at} <br />
 	Updated At&nbsp;&nbsp;&nbsp;: {data.frontmatter?.updated_at} <br />
 	Author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {data.frontmatter?.author}
