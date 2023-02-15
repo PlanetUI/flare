@@ -52,15 +52,19 @@
 	}
 
 	ul {
-		@apply list-disc list-inside pl-8 py-1 text-text-3;
+		@apply list-disc list-inside pl-8 py-1;
 	}
 
 	ol {
-		@apply list-decimal list-inside pl-8 py-1 text-text-3;
+		@apply list-decimal list-inside pl-8 py-1;
 	}
 
-	p > code {
-		@apply bg-black-3 text-thame-3 p-1 rounded text-xs;
+	:is(ul, ol) > li {
+		@apply text-text-3;
+	}
+
+	:is(p, li) > code {
+		@apply bg-black text-thame-3 p-0.5 rounded text-xs border border-thame-3;
 	}
 
 	table {
