@@ -10,7 +10,7 @@
 		{#each data.posts as { slug, title, author, description, updated_at, thumbnail }}
 			<a
 				href={'/dash/learn/posts/' + slug}
-				class=" bg-black-1 h-min rounded-lg hover:outline hover:outline-thame-1-variant">
+				class=" bg-black-1 h-min rounded-lg hover:outline-thame-1-variant hover:outline-dashed hover:outline-2 hover:outline-offset-2 hover:bg-black-7">
 				<div class="flex h-64">
 					<img
 						class="m-auto w-40"

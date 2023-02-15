@@ -11,6 +11,7 @@ module.exports = {
 				'thame-2-variant': 'hsl(240, 8%, 35%)',
 				'thame-3-variant': 'hsl(204, 100%, 50%)',
 				'black-1': 'hsl(0, 0%, 10%)',
+				'black-7': 'hsl(0, 0%, 7%)',
 				'black-2': 'hsl(0, 0%, 18%)',
 				'black-3': 'hsl(0, 0%, 22%)',
 				'black-4': 'hsl(0, 0%, 40%)',
