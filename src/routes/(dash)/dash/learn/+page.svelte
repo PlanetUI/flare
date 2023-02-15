@@ -2,7 +2,7 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 
-	const handleError = (ev) => (ev.target.src = '/favicon.png');
+	const handleError = (ev: any) => (ev.target.src = '/favicon.png');
 </script>
 
 <main class="w-full mx-4">
@@ -12,7 +12,11 @@
 				href={'/dash/learn/posts/' + slug}
 				class=" bg-black-1 h-min rounded-lg hover:outline hover:outline-thame-1-variant">
 				<div class="flex h-64">
-					<img class="m-auto" src={thumbnail ? thumbnail : ''} on:error={handleError} alt={slug} />
+					<img
+						class="m-auto w-40"
+						src={thumbnail ? thumbnail : ''}
+						on:error={handleError}
+						alt={slug} />
 				</div>
 				<div class="p-4">
 					<h5 class="text-thame-1">{title}</h5>

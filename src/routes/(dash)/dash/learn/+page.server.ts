@@ -19,7 +19,7 @@ export const load: PageServerLoad = async ({ url }) => {
 	const posts = await Promise.all(postPromises);
 	const publishedPosts = posts.filter((post) => post.published).slice(0, MAX_POSTS);
 
-	publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
+	publishedPosts.sort((a, b) => (new Date(a.published_at) > new Date(b.published_at) ? -1 : 1));
 
 	return { posts: publishedPosts };
 };

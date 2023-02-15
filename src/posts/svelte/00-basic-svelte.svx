@@ -1,0 +1,15 @@
+---
+title: 'Basic HTML, CSS, JS dengan svelte'
+thumbnail: '/svelte.png'
+description: 'Membuat aplikasi web dengan dasar html, css dan js menggunakan SvelteKit'
+author: 'Hans'
+published_at: '2023-02-14 01:11:00'
+updated_at: '2023-02-14 01:11:00'
+published: true
+---
+
+> Sebelum melanjutkan, pastikan kamu sudah mempelajari [Mempersiapkan Environment Scalable NodeJS Project. (Basic)](/dash/learn/posts/dasar-node-js)
+
+# Basic HTML, CSS, JS dengan svelte
+
+> coming soon
