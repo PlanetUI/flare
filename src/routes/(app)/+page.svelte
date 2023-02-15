@@ -32,13 +32,13 @@
 					<div class="md:text-7xl text-4xl tracking-widest font-semibold">
 						<span class="text-text-1">SVELTE</span><span class=" pl-1 text-text-3">KIT</span>
 					</div>
-					<div class="py-2 text-text-2 text-2xl">belajar menjadi fullstack engineer</div>
+					<div class="-mt-3 pb-2 text-text-2 text-2xl">Belajar menjadi Fullstack Developer</div>
 					<div class="pt-5">
 						<a
 							data-sveltekit-preload-data="hover"
 							href="/dash/learn"
 							class="hover:no-underline hover:text-text-1 hover:bg-thame-1-variant bg-thame-1 px-4 py-3 rounded text-xl text-white">
-							mulai belajar ➡
+							Mulai Belajar ➡
 						</a>
 					</div>
 				</div>
@@ -54,12 +54,21 @@
 </main>
 
 <div class=" bg-black-1 text-thame-1 h-screen flex">
-	<div class="m-auto text-5xl font-bold">COMING SOON!</div>
+	<div class="px-4 pt-16 w-full">
+		<div class=" text-thame-3 text-center">Semua Akses</div>
+		<div class=" pt-8 text-center text-3xl md:text-5xl font-extrabold text-thame-1">
+			Dapatkan Akses Belajar Selamanya.
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-4 pt-8">
+			<div class="border p-4 rounded-xl border-thame-1 max-w-md mx-auto w-full">a</div>
+			<div class="border p-4 rounded-xl border-thame-1 max-w-md mx-auto w-full">b</div>
+		</div>
+	</div>
 </div>
 
 <style>
 	.parallax-container {
-		opacity: 40%;
+		opacity: 25%;
 		position: fixed;
 		left: 50%;
 		transform: translate(-50%, 0);
