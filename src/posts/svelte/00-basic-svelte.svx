@@ -22,3 +22,5 @@ Tidak hanya aplikasi **web**, namun aplikasi antarmuka **desktop** dan **mobile*
 Untuk membuat aplikasi antarmuka web, kita membutuhkan dasar-dasar HTML, CSS dan JS.
 Svelte adalah framework yang memudahkan kita untuk membuat aplikasi antarmuka dengan dasar-dasar tersebut.
 Svelte akan mengubah kode kita menjadi kode yang lebih efisien dan lebih cepat.
+
+> note: materi belum final, masih dalam penulisan ... 🙏🏻

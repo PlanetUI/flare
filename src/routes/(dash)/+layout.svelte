@@ -4,6 +4,10 @@
 	import Header from '$lib/components/header.svelte';
 </script>
 
+<svelte:head>
+	<title>Mashanz Learning Dashboard</title>
+</svelte:head>
+
 <Header />
 <Aside />
 <main class="h-screen w-full overflow-auto flex flex-row md:pl-44 pt-16 bg-black-3">
