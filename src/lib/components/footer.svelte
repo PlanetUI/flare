@@ -1,13 +1,10 @@
 <footer class="bg-black-2 text-text-1 font-overpass  flex w-full h-16 px-4 shadow font-thin">
-	<div class="m-auto flex w-full">
+	<div class="m-auto flex md:flex-row text-center md:text-left flex-col w-full">
 		<a href="https://mashanz.com" class="flex-grow">
 			&copy; 2021 - 2023 Mashanz Software Engineering
 		</a>
 		<nav class="flex gap-4">
-			<a href="/terms">Terms</a>
-			<span>·</span>
-			<a href="https://svelte.dev">Svelte</a>
-			<a href="https://kit.svelte.dev">SvelteKit</a>
+			<a class="m-auto md:m-0" href="/terms">Terms</a>
 		</nav>
 	</div>
 </footer>

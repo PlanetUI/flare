@@ -1,0 +1,19 @@
+<svelte:head>
+    <title>Syarat dan Ketentuan</title>
+</svelte:head>
+
+# Syarat dan Ketentuan
+
+App ini masih dalam tahap pengembangan, jadi masih banyak kekurangan dan bug. Jika kamu menemukan bug atau kekurangan, silahkan laporkan di [GitHub](github.com/PlanetUI/flare)
+
+## 1. Penggunaan
+
+Dengan menggunakan aplikasi ini, kamu setuju untuk mengikuti semua syarat dan ketentuan yang berlaku.
+
+## 2. Data
+
+Dengan login menggunakan akun Google, kamu setuju untuk memberikan akses ke data-data yang dibutuhkan oleh aplikasi ini. Data-data tersebut adalah:
+
+  * Nama
+  * Email
+  * Foto profil
