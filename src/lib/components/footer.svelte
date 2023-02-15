@@ -4,7 +4,7 @@
 			&copy; 2021 - 2023 Mashanz Software Engineering
 		</a>
 		<nav class="flex gap-4">
-			<a class="m-auto md:m-0" href="/terms">Terms</a>
+			<a class="m-auto md:m-0" href="/terms">Syarat dan Ketentuan</a>
 		</nav>
 	</div>
 </footer>
