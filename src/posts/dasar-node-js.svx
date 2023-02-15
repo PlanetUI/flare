@@ -14,6 +14,14 @@ published: true
 
 # Mempersiapkan Environment Scalable NodeJS Project. (Basic)
 
+JavaScript adalah bahasa pemrograman yang fleksible, mudah dipelajari, dan banyak digunakan.
+Untuk menjalankan code javascript bisa langsung dijalankan di browser.
+Namun untuk menjalankan code javascript di luar browser, kita membutuhkan runtime javascript.
+Runtime javascript adalah program yang dapat menjalankan code javascript.
+Runtime javascript yang paling populer adalah NodeJS.
+Sebenarnya ada banyak runtime javascript lainnya seperti Rhino, V8, SpiderMonkey, Deno, Bun, dll.
+Namun dalam tutorial ini kita akan menggunakan NodeJS sebagai runtime javascript.
+
 NodeJS merupakan runtime JavaScript dibuat di atas V8 JavaScript Engine milik Chrome.
 NodeJS dapat digunakan untuk membuat aplikasi web, aplikasi mobile, aplikasi CLI, dan aplikasi desktop.
 

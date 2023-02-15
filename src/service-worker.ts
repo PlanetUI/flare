@@ -1,34 +1,37 @@
+/// <reference types="@sveltejs/kit" />
+/// <reference no-default-lib="true"/>
+/// <reference lib="esnext" />
 /// <reference lib="webworker" />
 
 // Imports:
 import { build, files, version } from '$service-worker';
 
 // Initializations:
-const worker = self as unknown as ServiceWorkerGlobalScope;
+const sw = self as unknown as ServiceWorkerGlobalScope;
 const FILES = `cache${version}`;
 const to_cache = build.concat(files);
 const staticAssets = new Set(to_cache);
 
 // Install Event:
-worker.addEventListener('install', (event) => {
+sw.addEventListener('install', (event) => {
 	event.waitUntil(
 		caches
 			.open(FILES)
 			.then((cache) => cache.addAll(to_cache))
 			.then(() => {
-				worker.skipWaiting();
+				sw.skipWaiting();
 			})
 	);
 });
 
 // Activation Event:
-worker.addEventListener('activate', (event) => {
+sw.addEventListener('activate', (event) => {
 	event.waitUntil(
 		caches.keys().then(async (keys) => {
 			for (const key of keys) {
 				if (key !== FILES) await caches.delete(key);
 			}
-			worker.clients.claim();
+			sw.clients.claim();
 		})
 	);
 });
@@ -48,7 +51,7 @@ async function fetchAndCache(request: Request) {
 }
 
 // Fetch Event:
-worker.addEventListener('fetch', (event) => {
+sw.addEventListener('fetch', (event) => {
 	if (event.request.method !== 'GET' || event.request.headers.has('range')) return;
 	const url = new URL(event.request.url);
 	const isHttp = url.protocol.startsWith('http');

@@ -65,4 +65,4 @@ console.log(add(a, b)); // this is some comments that have long text in it.
 
 [Link to Google](https://www.google.com)
 
-![Image](/favicon.png)
+![Example Figure Loading](/favicon.png)
