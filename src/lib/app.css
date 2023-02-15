@@ -35,6 +35,14 @@
 		@apply text-text-3 py-2;
 	}
 
+	strong {
+		@apply font-extrabold text-thame-1;
+	}
+
+	del {
+		@apply text-gray-600 italic;
+	}
+
 	body {
 		@apply bg-black-1 text-text-1 font-overpass;
 	}

@@ -12,4 +12,13 @@ published: true
 
 # Basic HTML, CSS, JS dengan svelte
 
-> coming soon
+Ada berbagai cara untuk membuat aplikasi antarmuka, khusus nya antarmuka web. Seperti menggunakan **Flutter**, **C**, **C#**, **Java**, **Rust**, dll.
+Namun **terlalu banyak pilihan** membuat programmer pemula bingung untuk memilih mana yang harus dipelajari.
+oleh karena itu, kita akan mempelajari dasar-dasar HTML, CSS dan JS untuk membuat aplikasi antarmuka.
+
+### Mengapa HTML, CSS dan JavaScript?
+Tidak hanya aplikasi **web**, namun aplikasi antarmuka **desktop** dan **mobile** juga bisa dibuat dengan **HTML**, **CSS** dan **JS**.
+
+Untuk membuat aplikasi antarmuka web, kita membutuhkan dasar-dasar HTML, CSS dan JS.
+Svelte adalah framework yang memudahkan kita untuk membuat aplikasi antarmuka dengan dasar-dasar tersebut.
+Svelte akan mengubah kode kita menjadi kode yang lebih efisien dan lebih cepat.

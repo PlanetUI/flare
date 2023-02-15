@@ -6,7 +6,7 @@
 </script>
 
 <header
-	class="bg-black-2 text-text-1 font-overpass top-0 z-[100] fixed flex w-full h-16 px-4 shadow font-thin">
+	class="bg-black-1 text-text-1 font-overpass top-0 z-[100] fixed flex w-full h-16 px-4 shadow-black-2 shadow-sm font-thin">
 	<div class="m-auto flex w-full">
 		<div class="flex flex-grow">
 			<a href="/" class="my-auto font-semibold hover:text-text-1 hover:no-underline">
@@ -42,7 +42,7 @@
 </header>
 
 <div
-	class="absolute top-0 right-0 mt-16 p-4 w-full max-w-sm bg-black-2 border-b border-x text-right"
+	class="absolute top-0 right-0 mt-16 p-4 w-full max-w-sm bg-black-1 border-black-2 border-b border-x text-right"
 	class:hidden={!is_menu_open}>
 	{#if $page.data.session}
 		<div class="py-2">
