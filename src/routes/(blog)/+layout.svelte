@@ -4,9 +4,9 @@
 	import Header from '$lib/components/header.svelte';
 	import hljs from 'highlight.js';
 	import 'highlight.js/styles/github-dark.css';
-	import { onMount } from 'svelte';
+	import { afterUpdate } from 'svelte';
 
-	onMount(() => {
+	afterUpdate(() => {
 		hljs.initHighlightingOnLoad();
 	});
 </script>
