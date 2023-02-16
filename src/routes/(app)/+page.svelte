@@ -53,20 +53,93 @@
 	</div>
 </main>
 
-<div class=" bg-black-1 text-thame-1 h-screen flex">
-	<div class="px-4 pt-16 w-full">
+<div class=" bg-black-1 text-thame-1 flex py-12">
+	<div class="px-4 w-full">
 		<div class=" text-thame-3 text-center">Semua Akses</div>
 		<div class=" pt-8 text-center text-3xl md:text-5xl font-extrabold text-thame-1">
-			Dapatkan Akses Belajar Selamanya.
+			Dapatkan Semua Akses Belajar.
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-4 pt-8">
-			<div class="border p-4 rounded-xl border-thame-1 max-w-md mx-auto w-full">a</div>
-			<div class="border p-4 rounded-xl border-thame-1 max-w-md mx-auto w-full">b</div>
+		<div class="text-center pt-4 flex">
+			<div class="max-w-2xl m-auto">
+				<p>
+					Belajar Fullstack web development menggunakan <strong>SvelteKit</strong>. Materi
+					pembelajaran menggunakan roadmap Fullstack Web Development yang terarah dari dasar hingga
+					terapan.
+				</p>
+			</div>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-4 pt-8 text-center">
+			<div
+				class="border rounded-xl border-thame-1 max-w-md mx-auto w-full border-opacity-50 hover:border-opacity-100 hover:bg-black-7">
+				<div class="p-4">
+					<div>6 Bulan</div>
+					<div class="text-3xl font-bold">Rp. 99.000/bln</div>
+					<div class="text-left">
+						<ul>
+							<li>Premium akses selama 6 bulan.</li>
+							<li>Update materi gratis.</li>
+							<li class="invisible" />
+						</ul>
+					</div>
+				</div>
+				<div class="p-4">
+					<button
+						class="w-full border border-thame-1 p-4 rounded-lg border-opacity-50 text-thame-1 text-opacity-50 hover:border-opacity-100 hover:text-opacity-100 hover:bg-thame-1 hover:text-black-7 font-extrabold">
+						Berlangganan 6 Bulan
+					</button>
+				</div>
+			</div>
+			<div
+				class="border rounded-xl border-thame-3 text-thame-3 max-w-md mx-auto w-full border-opacity-50 hover:border-opacity-100 hover:bg-black-7">
+				<div class="p-4">
+					<div>12 Bulan</div>
+					<div class="text-3xl font-bold">Rp. 75.000/bln</div>
+					<div class="text-left">
+						<ul>
+							<li>Premium akses selama 12 bulan.</li>
+							<li>Update materi gratis.</li>
+							<li>Hemat Rp. 288.000 (~24%)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="p-4">
+					<button
+						class="w-full border border-thame-3 p-4 rounded-lg border-opacity-50 text-thame-3 text-opacity-50 hover:border-opacity-100 hover:text-opacity-100 hover:bg-thame-3 hover:text-black-7 font-extrabold">
+						Berlangganan 12 Bulan
+					</button>
+				</div>
+			</div>
+		</div>
+		<div
+			class="border rounded-xl border-thame-2 text-thame-2 max-w-4xl mx-auto w-full mt-4 text-center border-opacity-50 hover:border-opacity-100 hover:bg-black-7 ">
+			<div class="p-4">
+				<div class="">Akses Premium Selamanya</div>
+				<div class="text-3xl font-bold">Rp. 1.500.000</div>
+				<div class="text-left max-w-sm w-full">
+					<ul>
+						<li>Premium akses selamanya</li>
+						<li>Update materi gratis.</li>
+						<li>Paling Hemat</li>
+					</ul>
+				</div>
+			</div>
+			<div class="p-4">
+				<button
+					class="w-full border border-thame-2 p-4 rounded-lg border-opacity-50 text-thame-2 text-opacity-50 hover:border-opacity-100 hover:text-opacity-100 hover:bg-thame-2 hover:text-black-7 font-extrabold">
+					Premium Akses Selamanya
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
+	p {
+		@apply m-0 p-0;
+	}
+	li {
+		@apply text-thame-2;
+	}
 	.parallax-container {
 		opacity: 25%;
 		position: fixed;
