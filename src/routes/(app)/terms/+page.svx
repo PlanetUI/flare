@@ -4,16 +4,19 @@
 
 # Syarat dan Ketentuan
 
-App ini masih dalam tahap pengembangan, jadi masih banyak kekurangan dan bug. Jika kamu menemukan bug atau kekurangan, silahkan laporkan di [GitHub](github.com/PlanetUI/flare)
+Aplikasi masih dalam early-access / on-development. Dukung pengembangan aplikasi pembelajaran dengan mendaftar sebagai earlybird member dengan premium akses selamanya.
 
-## 1. Penggunaan
+#### I. Penggunaan
 
 Dengan menggunakan aplikasi ini, kamu setuju untuk mengikuti semua syarat dan ketentuan yang berlaku.
 
-## 2. Data
+#### II. Akses Data
 
-Dengan login menggunakan akun Google, kamu setuju untuk memberikan akses ke data-data yang dibutuhkan oleh aplikasi ini. Data-data tersebut adalah:
+Dengan login menggunakan akun Google, kamu setuju untuk memberikan akses ke data-data yang dibutuhkan oleh aplikasi ini. Data-data tersebut adalah: Nama, Email, Foto profil, history detail pembayaran dan history akses halaman.
 
-  * Nama
-  * Email
-  * Foto profil
+#### III. Premium akses
+
+Dengan membeli premium akses, kamu setuju untuk membayar sesuai dengan harga yang tertera di aplikasi. Harga tersebut dapat berubah sewaktu-waktu tanpa pemberitahuan terlebih dahulu.
+Akses akan diberikan paling lambat 1x24 jam setelah pembayaran. Refund hanya paling lama 7 hari setelah tanggal pembayaran.
+Lewat 7 hari, tidak ada refund yang diberikan.
+Jika anda tidak menerima akses premium setelah 1x24 jam pembayaran, silahkan hubungi kami di [email@mashanz.com](mailto:email@mashanz.com).
