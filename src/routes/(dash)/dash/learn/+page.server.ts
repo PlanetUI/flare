@@ -10,7 +10,7 @@ export const load: PageServerLoad = async (event) => {
 	let is_premium = false;
 	if (session) {
 		user = await db_get_user({ name: session?.user?.name, email: session.user?.email });
-		user?.is_premium_user ? is_premium = true : is_premium = false;
+		user?.is_premium_user ? (is_premium = true) : (is_premium = false);
 	}
 	let publishedPosts: App.BlogPost[] = [];
 
@@ -32,7 +32,6 @@ export const load: PageServerLoad = async (event) => {
 
 		publishedPosts.sort((a, b) => (new Date(a.published_at) > new Date(b.published_at) ? -1 : 1));
 	}
-
 
 	return { posts: publishedPosts };
 };
