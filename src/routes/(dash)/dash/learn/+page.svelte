@@ -6,6 +6,14 @@
 </script>
 
 <main class="w-full mx-4">
+	{#if data.posts.length === 0}
+		<div class="text-center text-thame-1">
+			<h1 class="text-4xl font-bold">Anda belum menjadi member Premium</h1>
+			<p class="text-xl">
+				Silahkan <a href="/">daftar</a> menjadi member premium untuk mendapatkan akses belajar.
+			</p>
+		</div>
+	{/if}
 	<div class="grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto py-8">
 		{#each data.posts as { slug, title, author, description, updated_at, thumbnail }}
 			<a
