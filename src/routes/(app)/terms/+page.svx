@@ -6,6 +6,8 @@
 
 Aplikasi masih dalam early-access / on-development. Dukung pengembangan aplikasi pembelajaran dengan mendaftar sebagai earlybird member dengan premium akses selamanya.
 
+[Private Mentoring](https://github.com/PlanetUI/practical-svelte) masih terbuka untuk pendaftaran selama slot masih tersedia.
+
 #### I. Penggunaan
 
 Dengan menggunakan aplikasi ini, kamu setuju untuk mengikuti semua syarat dan ketentuan yang berlaku.
