@@ -1,5 +1,7 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation';
+	import type { PageData } from './$types';
+	export let data: PageData;
 
 	// tilt effect
 	import tilt from '$lib/tilt.js';
@@ -54,6 +56,30 @@
 		</div>
 	</div>
 </main>
+
+<div class=" bg-black-1 text-thame-1 flex py-12">
+	<div class="px-4 w-full">
+		<div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-4 pt-8 text-center">
+			<div class="flex">
+				<div
+					class="cards border rounded-xl border-thame-3 text-thame-3 max-w-md mx-auto w-full border-opacity-50 hover:border-opacity-100 hover:bg-black-7 p-4">
+					<div class="text-3xl md:text-5xl font-extrabold text-thame-3">{data.users}</div>
+					<div class="text-thame-2">Member Terdaftar</div>
+				</div>
+			</div>
+
+			<div class="flex">
+				<div
+					class="cards border rounded-xl border-thame-3 text-thame-3 max-w-md mx-auto w-full border-opacity-50 hover:border-opacity-100 hover:bg-black-7 p-4">
+					<div class="text-3xl md:text-5xl font-extrabold text-thame-3">
+						{data.premium_users}
+					</div>
+					<div class="text-thame-2 ">Premium Member</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <div class=" bg-black-1 text-thame-1 flex py-12">
 	<div class="px-4 w-full">
@@ -188,6 +214,10 @@
 		background: linear-gradient(135deg, hsl(204 100% 63% / 0.2), hsl(15 100% 40% / 0.2));
 	}
 
+	.cards {
+		background: linear-gradient(135deg, hsl(0 0% 7% / 0.1), hsl(204 100% 63% / 0.1));
+		@apply bg-black-7;
+	}
 	#card-1 {
 		background: linear-gradient(135deg, hsl(0 0% 7% / 0.1), hsl(15 100% 40% / 0.1));
 		@apply bg-black-7;
