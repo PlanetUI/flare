@@ -7,6 +7,10 @@
 
 	const is_premium =
 		data.frontmatter?.is_premium === undefined ? false : data.frontmatter?.is_premium;
+
+	let is_render = false;
+	if (is_premium === data.is_premium_user) is_render = true;
+	if (!is_premium) is_render = true;
 </script>
 
 <svelte:head>
@@ -18,7 +22,7 @@
 	<a href="/dash/learn">⬅ Kembali</a>
 </div>
 
-{#if data.is_premium_user === is_premium}
+{#if is_render}
 	<blockquote
 		class="bg-gray-500 bg-opacity-20 border-l-4 border-l-gray-500 text-text-2 font-mono not-italic text-xs">
 		Published At&nbsp;: {data.frontmatter?.published_at} <br />
