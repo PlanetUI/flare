@@ -149,7 +149,7 @@
 			class="border rounded-xl border-thame-2 text-thame-2 max-w-4xl mx-auto w-full mt-4 text-center border-opacity-50 hover:border-opacity-100 hover:bg-black-7 ">
 			<div class="p-4">
 				<div class="">Akses Premium Selamanya</div>
-				<del class="text-3xl font-bold">Rp. 1.500.000</del>
+				<del class="text-3xl font-bold">Rp. 7.500.000</del>
 				<div class="text-3xl font-bold text-green-500">Rp. 500.000</div>
 				<div class="text-left max-w-sm w-full pt-4 flex m-auto">
 					<ul class="">
