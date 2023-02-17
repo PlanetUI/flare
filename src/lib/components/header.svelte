@@ -9,29 +9,35 @@
 	class="bg-black-1 text-text-1 font-overpass top-0 z-[100] fixed flex w-full h-16 px-4 shadow-black-2 shadow-sm font-thin">
 	<div class="m-auto flex w-full">
 		<div class="flex flex-grow">
-			<a href="/" class="my-auto font-semibold hover:text-text-1 hover:no-underline">
+			<a href="/#" class="my-auto font-semibold hover:text-text-1 hover:no-underline">
 				PRACTICAL <span class="text-thame-1">SVELTEKIT</span>
 			</a>
 		</div>
 
 		<nav class="flex gap-4 font-thin">
-			{#if $page.data.session}
-				<span class="hidden md:block">
-					<em>
+			<span class="hidden md:flex">
+				<a class="text-text-3 pr-2" href="/#all-access">Premium</a>
+				{#if $page.data.session}
+					<span class="pr-2">﹒</span>
+					<em class="pr-2">
 						Hi 👋🏻 <strong>{$page.data.session.user?.name ?? 'User'}</strong>
 					</em>
 					<button
-						class="hover:text-thame-3 hover:underline"
+						class="hover:text-thame-3 hover:underline border px-2 rounded font-mono text-thame-3 border-thame-3"
 						on:click={() =>
 							signOut({
 								callbackUrl: '/'
 							})}>
-						🚪Keluar
+						Keluar 🚪
 					</button>
-				</span>
-			{:else}
-				<a href="/auth" class="hover:text-thame-3 hover:underline hidden md:block"> Masuk 🔓 </a>
-			{/if}
+				{:else}
+					<a
+						href="/auth"
+						class="hover:text-thame-3 hover:underline hidden md:block border px-2 rounded font-mono text-thame-3 border-thame-3">
+						Masuk 🔓
+					</a>
+				{/if}
+			</span>
 			<div class="flex md:hidden">
 				<button on:click={() => (is_menu_open = !is_menu_open)} class="m-auto border py-1 px-3">
 					⚙
@@ -42,9 +48,12 @@
 </header>
 
 <div
-	class="absolute top-0 right-0 mt-16 p-4 w-full max-w-sm bg-black-1 border-black-2 border-b border-x text-right"
+	class="fixed top-0 right-0 mt-16 p-4 w-full max-w-sm bg-black-1 border-black-2 border-b border-x text-right"
 	class:hidden={!is_menu_open}>
 	{#if $page.data.session}
+		<div class="py-2">
+			<a class="text-text-3" href="/#all-access">Premium</a>
+		</div>
 		<div class="py-2">
 			<em>
 				Hi 👋🏻 <strong>{$page.data.session.user?.name ?? 'User'}</strong>
@@ -62,7 +71,12 @@
 			</button>
 		</div>
 	{:else}
-		<a href="/auth" class="hover:text-thame-3 hover:underline"> Masuk 🔓 </a>
+		<div class="py-2">
+			<a class="text-text-3 px-2" href="/#all-access">Premium</a>
+		</div>
+		<div class="py-2">
+			<a href="/auth" class="hover:text-thame-3 hover:underline"> Masuk 🔓 </a>
+		</div>
 	{/if}
 </div>
 

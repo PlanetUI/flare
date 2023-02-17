@@ -81,12 +81,12 @@
 	</div>
 </div>
 
-<div class=" bg-black-1 text-thame-1 flex py-12">
+<section id="all-access" class=" bg-black-1 text-thame-1 flex py-12">
 	<div class="px-4 w-full">
 		<div class=" text-thame-3 text-center">Akses Premium</div>
-		<div class=" pt-8 text-center text-3xl md:text-5xl font-extrabold text-thame-1">
+		<h2 class="pt-8 text-center text-3xl md:text-5xl font-extrabold text-thame-1">
 			Dapatkan Semua Akses Belajar.
-		</div>
+		</h2>
 		<div class="text-center pt-4 flex">
 			<div class="max-w-2xl m-auto">
 				<p>
@@ -172,7 +172,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <style lang="postcss">
 	p {
