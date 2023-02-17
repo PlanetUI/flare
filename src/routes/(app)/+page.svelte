@@ -29,14 +29,14 @@
 		{/each}
 	</div>
 	<div class="m-auto h-fit p-4">
-		<div class="grid grid-cols-2 md:gap-24">
+		<div class="grid md:grid-cols-2 md:gap-24">
 			<div class="flex">
 				<div class="m-auto">
 					<span class="text-xl font-semibold text-text-2">PRACTICAL</span>
 					<div class="md:text-7xl text-4xl tracking-widest font-semibold">
 						<span class="text-text-1">SVELTE</span><span class=" pl-1 text-text-3">KIT</span>
 					</div>
-					<div class="-mt-3 pb-2 text-text-2 text-2xl">Belajar menjadi Fullstack Developer</div>
+					<div class="-mt-1 pb-2 text-text-2 text-2xl">Belajar Fullstack Developer</div>
 					<div class="pt-5">
 						<a
 							data-sveltekit-preload-data="hover"
@@ -47,7 +47,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex" use:tilt={{ scale: 1.1, reverse }}>
+			<div class="md:flex hidden" use:tilt={{ scale: 1.1, reverse }}>
 				<img
 					class="m-auto w-32 h-32 md:w-72 md:h-72 rounded-full logo-svelte"
 					src="/svelte.png"
