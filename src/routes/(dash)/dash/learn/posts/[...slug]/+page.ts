@@ -10,7 +10,7 @@ export const load: PageLoad = async ({ params }) => {
 			match = { path, resolver: resolver as unknown as App.MdsvexResolver };
 			const post = await match.resolver?.();
 			if (!post || !post.metadata.published) {
-				throw error(404); // Couldn't resolve the post
+				throw error(404);
 			}
 			return {
 				component: post.default,

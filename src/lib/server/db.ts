@@ -12,7 +12,15 @@ export async function db_get_user(document: Document) {
 	const doc = db.collection('users');
 
 	// check if user exists, if not, create/update it
-	await doc.updateOne({ email: document.email }, { $set: document }, { upsert: true });
+	const now = Date.now()
+	const now_iso = new Date(now).toISOString()
+	const now_formatted = new Date(now).toLocaleString('id', { timeZone: 'Asia/jakarta' })
+	const new_document = {
+		...document,
+		last_active_iso: now_iso,
+		last_active_formatted: now_formatted
+	}
+	await doc.updateOne({ email: document.email }, { $set: new_document }, { upsert: true });
 
 	// get user from db
 	const data = await doc.findOne({ email: document.email });

@@ -1,7 +1,7 @@
-import type { PageServerLoad } from './$types';
+import type { LayoutServerLoad } from './$types';
 import { db_get_user } from '$lib/server/db';
 
-export const load: PageServerLoad = async (event) => {
+export const load: LayoutServerLoad = async (event) => {
 	const session = await event.locals.getSession();
 	let user;
 	let is_premium_user = false;

@@ -11,9 +11,6 @@ const authorization: Handle = async ({ event, resolve }) => {
 		const session = await event.locals.getSession();
 		if (!session) {
 			throw redirect(307, '/auth');
-		} else {
-			// get user from db, if not available, create it
-			await db_get_user({ name: session?.user?.name, email: session.user?.email });
 		}
 	}
 
