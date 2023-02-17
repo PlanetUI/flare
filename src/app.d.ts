@@ -23,5 +23,6 @@ declare namespace App {
 		published: boolean;
 		published_at: string;
 		updated_at: string;
+		is_premium: boolean;
 	}
 }
