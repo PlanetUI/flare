@@ -50,7 +50,7 @@
     - Routing
     - Loading Data
     - Forms
-    - API Routes
+    - [API Routes](/dash/learn/posts/sveltekit/api-rotes)
     - Error Redirects
     - Page Options
 - Database

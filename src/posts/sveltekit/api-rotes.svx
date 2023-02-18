@@ -1,0 +1,50 @@
+---
+title: 'API Routes'
+thumbnail: '/sveltekit-api.png'
+description: 'Membuat API dengan SvelteKit'
+author: 'Hans'
+published_at: '2023-02-18 16:19:00'
+updated_at: '2023-02-18 26:19:00'
+published: true
+is_premium: true
+---
+
+<script>
+    import Filename from '$lib/components/filename.svelte';
+</script>
+
+# API Routes
+
+## Apa itu API Routes?
+
+API Routes adalah sebuah fitur yang memungkinkan kita untuk membuat API dengan SvelteKit. 
+
+## Cara membuat API Routes
+
+Untuk membuat API, kita bisa membuat folder di dalam `src/routes` misal dengan nama `hello-api` kemudian tambahkan sebuah file dengan nama `+server.ts`.
+Kali ini kita akan membuat API denga GET method request biasa. Artinya ketika kita mengakses `http://localhost:5173/hello-api` dari browser, maka akan muncul sebuah JSON. Berikut kode nya.
+
+<Filename logo="/JS.svg" name="src/routes/hello-api/+server.ts" />
+
+```ts
+import { json } from '@sveltejs/kit';
+import type { RequestHandler } from './$types';
+
+export const GET: RequestHandler = async (event) => {
+	return json({
+        message: 'Hello World'
+    });
+};
+```
+
+## Cara mengakses API Routes
+
+Jalankan server dengan perintah `pnpm run dev` kemudian buka browser dan akses `http://localhost:5173/hello-api` maka akan muncul response seperti ini:
+
+<Filename name="http://localhost:5173/hello-api" />
+
+```json
+{
+    message: 'Hello World'
+}
+```
