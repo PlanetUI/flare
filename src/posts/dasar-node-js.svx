@@ -153,7 +153,7 @@ Setelah itu akan muncul file `package.json` di dalam folder `belajar-nodejs`.
 
 Kemudian buatlah file `index.js` di dalam folder `belajar-nodejs` dan isi file tersebut dengan kode berikut:
 
-<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="index.js" />
+<Filename logo="/JS.svg" name="index.js" />
 
 ```javascript
 console.log("Hello World")

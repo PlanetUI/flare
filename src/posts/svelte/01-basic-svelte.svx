@@ -1,0 +1,138 @@
+---
+title: 'Basic Svelte dan SvelteKit'
+thumbnail: '/svelte.png'
+description: 'Membuat Project Baru dan Struktur Project'
+author: 'Hans'
+published_at: '2023-02-18 12:42:00'
+updated_at: '2023-02-18 12:42:00'
+published: true
+is_premium: true
+---
+
+<script>
+    import Filename from '$lib/components/filename.svelte';
+</script>
+
+> Sebelum melanjutkan, pastikan kamu sudah mempelajari [Mempersiapkan Environment Scalable NodeJS Project. (Basic)](/dash/learn/posts/dasar-node-js) dan [Basic HTML](/dash/learn/posts/svelte/00-basic-html-css-js)
+
+# Basic Svelte
+
+Svelte adalah sebuah framework javascript yang memungkinkan kita untuk membuat aplikasi web dengan menggunakan html, css dan js. 
+Svelte akan mengubah kode kita menjadi kode javascript yang lebih efisien. 
+Svelte juga memungkinkan kita untuk membuat aplikasi web dengan menggunakan cara yang berbeda dari cara yang kita lakukan sebelumnya.
+
+Untuk pemula, svelte lebih mudah dipelajari ketimbang ReactJS dan Vue, karena svelte lebih sederhana dan lebih mudah dipahami.
+Dan untuk project yang lebih kompleks, svelte juga tetap bisa digunakan.
+
+## Membuat Project Baru
+
+Untuk membuat project baru, kami merekomendasikan untuk menggunakan sveltekit.
+Sveltekit adalah sebuah framework yang dibangun di atas svelte, dan sveltekit adalah sebuah framework fullstack (Frontend dan backend).
+
+Untuk membuat project baru, buka terminal dan ketikkan perintah berikut:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+pnpm create svelte@latest belajar-sveltekit
+```
+
+#### Penjelasan
+
+- `pnpm` adalah package manager yang akan digunakan untuk menginstall package-package yang dibutuhkan oleh project.
+- `create` adalah perintah untuk membuat project baru.
+- `svelte@latest` adalah nama package yang akan digunakan untuk membuat project baru.
+- `belajar-sveltekit` adalah nama project yang akan dibuat.
+
+Setelah perintah diatas dijalankan, maka akan muncul pertanyaan seperti berikut:
+- Type project yang akan di buat (Skeleton project)
+- Type checking dengan TypeScript (Yes, using TypeScript syntax)
+- ESLint untuk code linting (Yes)
+- Prettier untuk code formatting (Yes)
+- Playwright untuk browser testing (Yes)
+- Vitest untuk unit testing (Yes)
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="output" />
+
+```bash
+Welcome to SvelteKit!
+
+✔ Which Svelte app template? › Skeleton project
+✔ Add type checking with TypeScript? › Yes, using TypeScript syntax
+✔ Add ESLint for code linting? … Yes
+✔ Add Prettier for code formatting? … Yes
+✔ Add Playwright for browser testing? … Yes
+✔ Add Vitest for unit testing? … Yes
+```
+
+Mengapa kita pilih yes semua? Karena kita akan mempelajari semua hal tersebut di tutorial ini.
+
+## Struktur Project
+
+Setelah project berhasil dibuat, maka akan muncul struktur project seperti berikut:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="output" />
+
+```bash
+.
+├── src
+│   ├── routes
+│   │   └── +page.svelte
+│   ├── app.d.ts
+│   ├── app.html
+│   └── index.test.ts
+├── static
+│   └── favicon.png
+├── tests
+│   └── test.ts
+├── .eslintignore
+├── .eslintrc.cjs
+├── .gitignore
+├── .npmrc
+├── .prettierignore
+├── .prettierrc
+├── .package.json
+├── playwright.config.ts
+├── README.md
+├── svelte.config.js
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## Menjalankan Project
+
+Untuk menjalankan project tersebut, terlebih dahulu masuk ke folder project tersebut dengan perintah berikut:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+cd belajar-sveltekit
+```
+
+Jalankan perintah berikut untuk install semua package yang dibutuhkan oleh project:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+pnpm install
+```
+
+Jalankan perintah berikut untuk menjalankan project:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="terminal" />
+
+```bash
+pnpm dev
+```
+
+Buka browser dan ketikkan alamat berikut:
+
+<Filename logo="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png?20190622111111" name="output" />
+
+```bash
+http://localhost:5173
+```
+
+> Selamat, kamu sudah berhasil membuat project baru dengan sveltekit.
+
+

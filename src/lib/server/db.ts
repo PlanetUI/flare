@@ -11,9 +11,9 @@ export async function db_get_user(document: Document) {
 	const db = client.db(`${import.meta.env.MODE}_flare`);
 	const doc = db.collection('users');
 
-	const now = Date.now()
-	const now_iso = new Date(now).toISOString()
-	const now_formatted = new Date(now).toLocaleString('id', { timeZone: 'Asia/jakarta' })
+	const now = Date.now();
+	const now_iso = new Date(now).toISOString();
+	const now_formatted = new Date(now).toLocaleString('id', { timeZone: 'Asia/jakarta' });
 
 	// get user from db
 	const data = await doc.findOne({ email: document.email });
@@ -21,15 +21,15 @@ export async function db_get_user(document: Document) {
 		// create user
 		const new_document_create = {
 			...document,
-			created_at: now_iso,
-		}
+			created_at: now_iso
+		};
 		await doc.insertOne(new_document_create);
 	} else {
 		const new_document_update = {
 			...document,
 			last_active_iso: now_iso,
 			last_active_formatted: now_formatted
-		}
+		};
 		await doc.updateOne({ email: document.email }, { $set: new_document_update }, { upsert: true });
 	}
 	client.close();

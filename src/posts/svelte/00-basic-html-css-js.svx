@@ -1,0 +1,221 @@
+---
+title: 'Basic HTML, CSS, JS dengan svelte'
+thumbnail: '/html-css-js.png'
+description: 'Membuat aplikasi web dengan dasar html, css dan js.'
+author: 'Hans'
+published_at: '2023-02-18 08:15:00'
+updated_at: '2023-02-18 06:15:00'
+published: true
+---
+
+<script>
+    import Filename from '$lib/components/filename.svelte';
+</script>
+
+> Sebelum melanjutkan, pastikan kamu sudah mempelajari [Mempersiapkan Environment Scalable NodeJS Project. (Basic)](/dash/learn/posts/dasar-node-js)
+
+# Basic HTML, CSS, JS
+
+Ada berbagai cara untuk membuat aplikasi antarmuka, khusus nya antarmuka web. Seperti menggunakan **Flutter**, **C**, **C#**, **Java**, **Rust**, dll.
+Namun **terlalu banyak pilihan** membuat programmer pemula bingung untuk memilih mana yang harus dipelajari.
+Oleh karena itu, kita akan mempelajari dasar-dasar HTML, CSS dan JS untuk membuat aplikasi antarmuka.
+
+### Mengapa HTML, CSS dan JavaScript?
+
+Tidak hanya aplikasi **web**, namun aplikasi antarmuka **desktop** dan **mobile** juga bisa dibuat dengan **HTML**, **CSS** dan **JS**.
+
+### Apa itu HTML?
+
+HTML adalah singkatan dari **HyperText Markup Language**. HTML adalah bahasa yang digunakan untuk membuat halaman web. HTML berfungsi untuk menentukan struktur halaman web, seperti judul, paragraf, gambar, dan lain-lain.
+
+#### Bagaimana cara menulis proyek html?
+
+1. Buatlah sebuah folder misal dengan nama `belajar-html`
+2. Buatlah sebuah file dengan nama `index.html` di dalam folder `belajar-html`
+3. Buka file `index.html` dengan text editor, misalnya **Visual Studio Code**
+4. Tuliskan kode berikut di dalam file `index.html`
+
+<Filename logo="/HTML5.png" name="index.html" />
+
+```html
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Belajar HTML</title>
+  </head>
+
+  <body>
+    <h1>Belajar HTML</h1>
+    <p>Belajar HTML adalah hal yang menyenangkan.</p>
+  </body>
+
+</html>
+```
+
+5. Simpan file `index.html`
+6. Buka file `index.html` dengan browser, misalnya **Google Chrome**.
+
+#### Penjelasan
+
+Komponent di dalam html seperti `<html>`, `<head>`, `<title>`, `<body>`, `<h1>` dan `<p>` di sebut `tag` html.
+Setiap tag ada tag pembuka dan tag penutup. Tag pembuka diawali dengan tanda `<` dan tag penutup diawali dengan tanda `</`.
+Tag `<html>` adalah tag induk dari semua tag html. Tag `<head>` berisi informasi tentang halaman web, seperti judul, deskripsi, dan lain-lain.
+Tag `<body>` berisi konten dari halaman web. Tag `<h1>` dan `<p>` adalah tag untuk judul dan paragraf.
+
+Sebenrarnya masih ada banyak tag html lainnya, seperti tag untuk gambar, tabel, dan lain-lain yang akan di bahas di materi lain.
+
+#### Menambahkan Styling dengan CSS
+
+Dari kode sebelum nya, kita sudah bisa membuat halaman web sederhana. Namun, halaman web yang kita buat masih terlihat sangat sederhana.
+Kita bisa menambahkan styling dengan CSS. CSS adalah singkatan dari **Cascading Style Sheets**. CSS berfungsi untuk menentukan tampilan dari halaman web.
+Berikut adalah contoh kode untuk menambahkan styling dengan CSS.
+
+<Filename logo="/HTML5.png" name="index.html" />
+
+```html
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Belajar HTML</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #ff0000;
+      }
+      p {
+        color: #00ff00;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Belajar HTML</h1>
+    <p>Belajar HTML adalah hal yang menyenangkan.</p>
+  </body>
+
+</html>
+```
+
+#### Penjelasan
+Tag `<style>` berisi kode CSS. Kode CSS di dalam tag `<style>` akan berlaku untuk semua halaman web yang menggunakan file `index.html` sebagai file utama.
+Kode CSS di dalam tag `<style>` bisa juga di pisah ke dalam file terpisah dengan ekstensi `.css`. Berikut adalah contoh kode untuk menambahkan styling dengan CSS yang di pisah ke dalam file terpisah.
+
+Buatlah file dengan nama `style.css` di dalam folder `belajar-html`, kemudian masukan style ke file `style.css` seperti berikut.
+
+<Filename logo="/CSS3.png" name="style.css" />
+
+```css
+body {
+  background-color: #f0f0f0;
+}
+h1 {
+  color: #ff0000;
+}
+p {
+  color: #00ff00;
+}
+```
+
+Simpan, kemudan edit file `index.html` seperti berikut.
+
+<Filename logo="/HTML5.png" name="index.html" />
+
+```html
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Belajar HTML</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Belajar HTML</h1>
+    <p>Belajar HTML adalah hal yang menyenangkan.</p>
+  </body>
+</html>
+```
+
+#### Penjelasan
+Tag `<link>` digunakan untuk menambahkan file CSS ke dalam halaman web. Tag `<link>` memiliki atribut `rel` yang berisi nilai `stylesheet` dan atribut `href` yang berisi nama file CSS.
+
+#### Menambahkan Interaksi dengan JavaScript
+
+JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web interaktif. Berikut adalah contoh kode untuk menambahkan interaksi dengan JavaScript.
+
+<Filename logo="/HTML5.png" name="index.html" />
+
+```html
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Belajar HTML</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Belajar HTML</h1>
+    <p>Belajar HTML adalah hal yang menyenangkan.</p>
+
+    <button id="btn">Klik Saya</button>
+    
+    <script>
+      const btn = document.getElementById('btn');
+      btn.addEventListener('click', function() {
+        alert('Halo, Selamat Belajar HTML');
+      });
+    </script>
+
+  </body>
+</html>
+```
+
+#### Penjelasan
+
+Tag `<script>` digunakan untuk menambahkan kode JavaScript ke dalam halaman web. Kode JavaScript di dalam tag `<script>` akan berlaku untuk semua halaman web yang menggunakan file `index.html` sebagai file utama.
+Kode JavaScript di dalam tag `<script>` bisa juga di pisah ke dalam file terpisah dengan ekstensi `.js`. Berikut adalah contoh kode untuk menambahkan interaksi dengan JavaScript yang di pisah ke dalam file terpisah.
+
+Buatlah file dengan nama `script.js` di dalam folder `belajar-html`, kemudian masukan kode JavaScript ke file `script.js` seperti berikut.
+
+<Filename logo="/JS.svg" name="script.js" />
+
+```js
+const btn = document.getElementById('btn');
+btn.addEventListener('click', function() {
+  alert('Halo, Selamat Belajar HTML');
+});
+```
+
+Simpan, kemudan edit file `index.html` seperti berikut.
+
+<Filename logo="/HTML5.png" name="index.html" />
+
+```html
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Belajar HTML</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Belajar HTML</h1>
+    <p>Belajar HTML adalah hal yang menyenangkan.</p>
+
+    <button id="btn">Klik Saya</button>
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>
+```
+
+#### Penjelasan
+
+Tag `<script>` digunakan untuk menambahkan kode JavaScript ke dalam halaman web. Tag `<script>` memiliki atribut `src` yang berisi nama file JavaScript.
