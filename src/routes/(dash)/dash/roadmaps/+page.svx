@@ -1,14 +1,20 @@
 # Fullstack Developer Roadmap with SvelteKit
 
-### Fundamental
+### 1. Fundamental
+
 - Web Development
 - Frontend
 - Backend
 - Database
 - DevOps
 
-### Basic
+### 2. Basic
+
 - Git
+    - Apa itu Git?
+    - Git Basic Command
+    - Service Git dengan GitHub
+    - Git Advance Command
 - HTML, CSS dan JS
     - [Basic HTML, CSS and JS](/dash/learn/posts/svelte/00-basic-html-css-js)
     - HTML
@@ -17,9 +23,35 @@
 - NodeJS
     - [Setup Scalable NodeJS Project](/dash/learn/posts/dasar-node-js)
 
-### Intermediate
+### 3. Intermediate
+
 - Svelte
-    - [Membuat Project Baru dan Struktur Folder](/dash/learn/posts/svelte/01-basic-svelte)
+    - Apa itu Svelte?
+        - [Membuat Project Baru dan Struktur Folder](/dash/learn/posts/svelte/01-basic-svelte)
+    - Reactivity
+    - Property
+    - Logic
+    - Events
+    - Binding
+    - Lifecycle
+    - Stores
+    - Motions
+    - Transitions
+    - Animations
+    - Actions
+    - Advance Styling
+    - Component Composition
+    - Context API
+    - Special Elements
+    - Module Context
+    - Debugging
 - SvelteKit
+    - Apa itu SvelteKit?
+    - Routing
+    - Loading Data
+    - Forms
+    - API Routes
+    - Error Redirects
+    - Page Options
 - Database
     - MongoDB
