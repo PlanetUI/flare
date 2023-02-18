@@ -220,15 +220,15 @@
 	}
 	#card-1 {
 		background: linear-gradient(135deg, hsl(0 0% 7% / 0.1), hsl(15 100% 40% / 0.1));
-		@apply bg-black-7;
+		@apply bg-black-7 hover:shadow-[0_0px_40px_-20px_rgba(0,0,0,0.3)] hover:shadow-thame-1;
 	}
 	#card-2 {
 		background: linear-gradient(135deg, hsl(0 0% 7% / 0.1), hsl(204 100% 63% / 0.1));
-		@apply bg-black-7;
+		@apply bg-black-7 hover:shadow-[0_0px_40px_-20px_rgba(0,0,0,0.3)] hover:shadow-thame-3;
 	}
 
 	#card-3 {
 		background: linear-gradient(135deg, hsl(0 0% 7% / 0.1), hsl(240 8% 43% / 0.1));
-		@apply bg-black-7;
+		@apply bg-black-7 hover:shadow-[0_0px_40px_-20px_rgba(0,0,0,0.3)] hover:shadow-black-3;
 	}
 </style>

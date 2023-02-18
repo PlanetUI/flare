@@ -5,12 +5,12 @@
 	const handleError = (ev: any) => (ev.target.src = '/favicon.png');
 </script>
 
-<main class="w-full mx-4">
-	<div class="grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto py-8">
+<main class="w-full md:mx-4">
+	<div class="grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 md:gap-2 gap-0.5 mx-auto md:py-8">
 		{#each data.posts as { slug, title, author, description, updated_at, thumbnail, is_premium }}
 			<a
 				href={'/dash/learn/posts/' + slug}
-				class=" bg-black-1 h-min rounded-lg hover:outline-thame-1-variant hover:outline hover:outline-2 hover:outline-offset-2 hover:bg-black-7">
+				class=" h-min md:rounded-lg hover:outline-thame-1-variant hover:outline hover:outline-2 hover:outline-offset-2 hover:z-10">
 				<div class="flex h-64">
 					<img
 						class="m-auto w-40"
@@ -38,6 +38,8 @@
 
 <style lang="postcss">
 	a {
+		background: linear-gradient(135deg, hsl(0 0% 7% / 0.1), hsl(15 100% 40% / 0.1));
+		@apply bg-black-7;
 		text-decoration: none !important;
 	}
 
