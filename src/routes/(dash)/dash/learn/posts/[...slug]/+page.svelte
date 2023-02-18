@@ -32,7 +32,7 @@
 	<svelte:component this={component} />
 {:else}
 	<div
-		class="bg-red-500 bg-opacity-20 border-l-4 border-l-red-500 text-text-2 font-mono not-italic text-xs px-4 pb-4">
+		class="bg-red-500 bg-opacity-20 border-l-4 border-l-red-500 text-text-2 font-mono not-italic text-xs p-4">
 		<div class="text-red-500 text-5xl pb-2">⚠️</div>
 		<div>
 			Anda tidak memiliki akses untuk membaca artikel ini. <br />
