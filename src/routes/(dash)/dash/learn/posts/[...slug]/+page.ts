@@ -2,7 +2,10 @@ import { slugFromPath } from '$lib/slugFromPath';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async ({ params }) => {
+export const load: PageLoad = async ({ params, setHeaders }) => {
+	setHeaders({
+		'Cache-Control': `public, max-age=${3600}, s-maxage=${3600}`
+	});
 	const modules = import.meta.glob(`/src/posts/**/*.{md,svx,svelte.md}`);
 	let match: { path?: string; resolver?: App.MdsvexResolver } = {};
 	for (const [path, resolver] of Object.entries(modules)) {
