@@ -22,7 +22,8 @@ API Routes adalah sebuah fitur yang memungkinkan kita untuk membuat **REST API**
 ## Cara membuat API Routes
 
 Untuk membuat API, kita bisa membuat folder di dalam `src/routes` misal dengan nama `hello-api` kemudian tambahkan sebuah file dengan nama `+server.ts`.
-Kali ini kita akan membuat API denga GET method request biasa. Artinya ketika kita mengakses `http://localhost:5173/hello-api` dari browser, maka akan muncul sebuah JSON. Berikut kode nya.
+Kali ini kita akan membuat API denga GET method request biasa. Artinya ketika kita mengakses `http://localhost:5173/hello-api` dari browser, 
+maka akan muncul sebuah JSON. Berikut kode nya.
 
 <Filename logo="/JS.svg" name="src/routes/hello-api/+server.ts" />
 
