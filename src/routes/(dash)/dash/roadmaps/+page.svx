@@ -1,0 +1,25 @@
+# Fullstack Developer Roadmap with SvelteKit
+
+### Fundamental
+- Web Development
+- Frontend
+- Backend
+- Database
+- DevOps
+
+### Basic
+- Git
+- HTML, CSS dan JS
+    - [Basic HTML, CSS and JS](/dash/learn/posts/svelte/00-basic-html-css-js)
+    - HTML
+    - CSS
+    - Javascript
+- NodeJS
+    - [Setup Scalable NodeJS Project](/dash/learn/posts/dasar-node-js)
+
+### Intermediate
+- Svelte
+    - [Membuat Project Baru dan Struktur Folder](/dash/learn/posts/svelte/01-basic-svelte)
+- SvelteKit
+- Database
+    - MongoDB

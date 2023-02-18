@@ -23,6 +23,12 @@
 		<a class="menu" href="/dash/learn" class:active={$page.url.pathname.startsWith('/dash/learn')}>
 			💻 BELAJAR
 		</a>
+		<a
+			class="menu"
+			href="/dash/roadmaps"
+			class:active={$page.url.pathname.startsWith('/dash/roadmaps')}>
+			🧭 ROADMAPS
+		</a>
 		<div class="flex-grow" />
 		<a
 			class="menu hidden"
