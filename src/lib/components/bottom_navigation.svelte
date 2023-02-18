@@ -4,7 +4,7 @@
 		<a href="/dash/learn" class="flex">
 			<div class="m-auto">
 				<span class="flex flex-col items-center">
-					<div class="text-lx">💻</div>
+					<div class="text-xl">💻</div>
 					<div class="text-xs">BELAJAR</div>
 				</span>
 			</div>
