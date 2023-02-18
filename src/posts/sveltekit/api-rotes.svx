@@ -17,7 +17,7 @@ is_premium: true
 
 ## Apa itu API Routes?
 
-API Routes adalah sebuah fitur yang memungkinkan kita untuk membuat REST API dengan SvelteKit. 
+API Routes adalah sebuah fitur yang memungkinkan kita untuk membuat **REST API** dengan SvelteKit. 
 
 ## Cara membuat API Routes
 
