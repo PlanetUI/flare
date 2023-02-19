@@ -4,7 +4,7 @@ thumbnail: '/sveltekit-api.png'
 description: 'Membuat API dengan SvelteKit'
 author: 'Hans'
 published_at: '2023-02-18 16:19:00'
-updated_at: '2023-02-18 17:01:00'
+updated_at: '2023-02-18 07:09:00'
 published: true
 is_premium: true
 ---
@@ -17,13 +17,13 @@ is_premium: true
 
 ## Apa itu API Routes?
 
-API Routes adalah sebuah fitur yang memungkinkan kita untuk membuat **REST API** dengan SvelteKit. 
+API Routes adalah sebuah fitur  SvelteKit yang memungkinkan kita untuk membuat **REST API** dengan sangat mudah. 
 
 ## Cara membuat API Routes
 
-Untuk membuat API, kita bisa membuat folder di dalam `src/routes` misal dengan nama `hello-api` kemudian tambahkan sebuah file dengan nama `+server.ts`.
-Kali ini kita akan membuat API denga GET method request biasa. Artinya ketika kita mengakses `http://localhost:5173/hello-api` dari browser, 
-maka akan muncul sebuah JSON. Berikut kode nya.
+Kali ini kita akan membuat API denga GET method request dengan response json object. 
+Artinya ketika kita mengakses `http://localhost:5173/hello-api` dari browser, maka akan muncul sebuah JSON.
+Untuk membuat nya, kita bisa membuat folder di dalam `src/routes` misal dengan nama `hello-api` kemudian tambahkan sebuah file dengan nama `+server.ts`. Berikut kode nya.
 
 <Filename logo="/JS.svg" name="src/routes/hello-api/+server.ts" />
 
@@ -33,7 +33,7 @@ import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async (event) => {
 	return json({
-        message: 'Hello World'
+        message: 'Contoh GET Response'
     });
 };
 ```
@@ -46,6 +46,56 @@ Jalankan server dengan perintah `pnpm run dev` kemudian buka browser dan akses `
 
 ```json
 {
-    message: 'Hello World'
+    message: 'Contoh GET Response'
 }
 ```
+
+Cara ini juga bisa digunakan untuk membuat API dengan method `POST`, `PUT`, `DELETE`, `PATCH` dan lain lain
+
+caranya hanya tinggal mengganti const dengn method yang di inginkan, misalnya:
+
+<Filename logo="/JS.svg" name="src/routes/hello-api/+server.ts" />
+
+```ts
+import { json } from '@sveltejs/kit';
+import type { RequestHandler } from './$types';
+
+// Contoh API dengan method GET
+export const GET: RequestHandler = async (event) => {
+	return json({
+        message: 'Contoh GET Response'
+    });
+};
+
+// Contoh API dengan method POST
+export const POST: RequestHandler = async (event) => {
+    return json({
+        message: 'Contoh POST Response'
+    });
+};
+
+// Contoh API dengan method PUT
+export const PUT: RequestHandler = async (event) => {
+    return json({
+        message: 'Contoh PUT Response'
+    });
+};
+
+// Contoh API dengan method DELETE
+export const DELETE: RequestHandler = async (event) => {
+    return json({
+        message: 'Contoh DELETE Response'
+    });
+};
+
+// Contoh API dengan method PATCH
+export const PATCH: RequestHandler = async (event) => {
+    return json({
+        message: 'Contoh PATCH Response'
+    });
+};
+```
+
+Untuk mengetest nya, kita bisa menggunakan aplikasi seperti Postman, Insomnia, atau yang lain nya. Dan arahkan url ke `http://localhost:5173/hello-api` dan pilih method yang di inginkan.
+
+> Selamat! Anda telah berhasil membuat API Routes dengan SvelteKit
