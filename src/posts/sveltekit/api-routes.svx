@@ -13,6 +13,8 @@ is_premium: true
     import Filename from '$lib/components/filename.svelte';
 </script>
 
+> Sebelum melanjutkan, pastikan kamu sudah mempelajari [Membuat Project SvelteKit](/dash/learn/posts/svelte/01-basic-svelte)
+
 # API Routes
 
 ## Apa itu API Routes?
