@@ -1,5 +1,4 @@
 import { env } from '$env/dynamic/private';
-import { db_get_user } from '$lib/server/db';
 import Google from '@auth/core/providers/google';
 import { SvelteKitAuth } from '@auth/sveltekit';
 import type { Handle } from '@sveltejs/kit';
