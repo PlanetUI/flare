@@ -1,10 +1,24 @@
 <script>
 	import '$lib/app.css';
-	import hljs from 'highlight.js';
-	import 'highlight.js/styles/github-dark.css';
 	import { afterUpdate } from 'svelte';
+	import hljs from 'highlight.js/lib/core';
+	import javascript from 'highlight.js/lib/languages/javascript';
+	import bash from 'highlight.js/lib/languages/bash';
+	import css from 'highlight.js/lib/languages/css';
+	import xml from 'highlight.js/lib/languages/xml';
+	import typescript from 'highlight.js/lib/languages/typescript';
+	import json from 'highlight.js/lib/languages/json';
+
+	import 'highlight.js/styles/github-dark.css';
 
 	afterUpdate(async () => {
+		hljs.registerLanguage('bash', bash);
+		hljs.registerLanguage('xml', xml);
+		hljs.registerLanguage('css', css);
+		hljs.registerLanguage('javascript', javascript);
+		hljs.registerLanguage('typescript', typescript);
+		hljs.registerLanguage('json', json);
+
 		try {
 			let built_in = hljs.getLanguage('bash')?.keywords?.built_in;
 			if (!built_in) {
