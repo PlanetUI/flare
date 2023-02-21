@@ -37,7 +37,7 @@
 
 		{#if data.user?.is_premium_user}
 			<div class="-mt-8">
-				<span class="p-1 text-xs rounded font-mono border border-thame-3 text-thame-3">
+				<span class="p-1 text-xs rounded font-mono border border-thame-1 text-thame-1">
 					PREMIUM
 				</span>
 			</div>
