@@ -21,12 +21,13 @@ export async function register(document: Document) {
 		// create user
 		const new_document_create = {
 			...document,
-			created_at: now_iso
+			created_at: now_iso,
+			last_active_iso: now_iso,
+			last_active_formatted: now_formatted
 		};
 		await doc.insertOne(new_document_create);
 	} else {
 		const new_document_update = {
-			...document,
 			last_active_iso: now_iso,
 			last_active_formatted: now_formatted
 		};
@@ -48,6 +49,24 @@ export async function db_get_user(document: Document) {
 	const doc = db.collection('users');
 
 	// get user from db
+	const data = await doc.findOne({ email: document.email });
+	client.close();
+
+	// return user data
+	return data;
+}
+
+export async function db_update_user(document: Document) {
+	// connect to db
+	const client = new MongoClient(env.DATABASE_URL || '');
+	await client.connect();
+
+	// get db and collection
+	const db = client.db(`${import.meta.env.MODE}_flare`);
+	const doc = db.collection('users');
+
+	// Update User
+	await doc.updateOne({ email: document.email }, { $set: document }, { upsert: true });
 	const data = await doc.findOne({ email: document.email });
 	client.close();
 

@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+	input[type='submit'] {
+		cursor: pointer;
+	}
+
 	h1 {
 		@apply text-3xl md:text-4xl lg:text-5xl font-bold text-thame-1 py-4;
 	}

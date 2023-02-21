@@ -3,6 +3,15 @@
 	import { signOut } from '@auth/sveltekit/client';
 
 	let is_menu_open = false;
+
+	async function get_user() {
+		return await fetch('/api/user', {
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+	}
 </script>
 
 <header
@@ -19,9 +28,17 @@
 				<a class="text-text-3 pr-2" href="/#all-access">Premium</a>
 				{#if $page.data.session}
 					<span class="pr-2">﹒</span>
-					<em class="pr-2">
-						Hi 👋🏻 <strong>{$page.data.session.user?.name ?? 'User'}</strong>
-					</em>
+					<a href="/dash/user">
+						<em class="pr-2">
+							Hi 👋🏻 <strong>
+								{#await get_user() then res}
+									{#await res.json() then data}
+										{data.name}
+									{/await}
+								{/await}
+							</strong>
+						</em>
+					</a>
 					<button
 						class="hover:text-thame-3 hover:underline border px-2 rounded font-mono text-thame-3 border-thame-3"
 						on:click={() =>
@@ -55,9 +72,17 @@
 			<a class="text-text-3" href="/#all-access">Premium</a>
 		</div>
 		<div class="py-2">
-			<em>
-				Hi 👋🏻 <strong>{$page.data.session.user?.name ?? 'User'}</strong>
-			</em>
+			<a href="/dash/user">
+				<em>
+					Hi 👋🏻 <strong>
+						{#await get_user() then res}
+							{#await res.json() then data}
+								{data.name}
+							{/await}
+						{/await}
+					</strong>
+				</em>
+			</a>
 		</div>
 
 		<div class="py-2">
