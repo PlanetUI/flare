@@ -17,7 +17,8 @@ const authorization: Handle = async ({ event, resolve }) => {
 				name: user?.name,
 				email: user?.email,
 				discord: user?.discord,
-				github: user?.github
+				github: user?.github,
+				is_premium_user: user?.is_premium_user
 			};
 		}
 	}

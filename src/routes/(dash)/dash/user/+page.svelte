@@ -35,6 +35,20 @@
 			{data.user?.email || ''}
 		</h2>
 
+		{#if data.user?.is_premium_user}
+			<div class="-mt-8">
+				<span class="p-1 text-xs rounded font-mono border border-thame-3 text-thame-3">
+					PREMIUM
+				</span>
+			</div>
+		{:else}
+			<div class="-mt-8">
+				<span class="p-1 text-xs rounded font-mono border border-green-500 text-green-500">
+					FREE
+				</span>
+			</div>
+		{/if}
+
 		<div class="grid grid-cols-4">
 			<label class="my-auto" for="name">Nama</label>
 			<input

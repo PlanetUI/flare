@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { signOut } from '@auth/sveltekit/client';
 
@@ -25,22 +26,38 @@
 
 		<nav class="flex gap-4 font-thin">
 			<span class="hidden md:flex">
-				<a class="text-text-3 pr-2" href="/#all-access">Premium</a>
+				<a class="text-text-3 pr-2" href="/#all-access">Member</a>
 				{#if $page.data.session}
 					<span class="pr-2">﹒</span>
 					<a href="/dash/user">
-						<em class="pr-2">
-							Hi 👋🏻 <strong>
-								{#await get_user() then res}
-									{#await res.json() then data}
+						<span class="pr-2 flex">
+							Hi 👋🏻&nbsp;
+							{#await get_user() then res}
+								{#await res.json() then data}
+									<strong class="pr-2 text-thame-3">
 										{data.name}
-									{/await}
+									</strong>
+									{#if data.is_premium_user}
+										<div class="">
+											<span
+												class="p-1 text-xs rounded font-mono border border-thame-1 text-thame-1">
+												PREMIUM
+											</span>
+										</div>
+									{:else}
+										<div class="">
+											<span
+												class="p-1 text-xs rounded font-mono border border-green-500 text-green-500">
+												FREE
+											</span>
+										</div>
+									{/if}
 								{/await}
-							</strong>
-						</em>
+							{/await}
+						</span>
 					</a>
 					<button
-						class="hover:text-thame-3 hover:underline border px-2 rounded font-mono text-thame-3 border-thame-3"
+						class="hover:text-thame-3 hover:underline border px-2 rounded font-mono text-thame-3 border-thame-3 text-xs"
 						on:click={() =>
 							signOut({
 								callbackUrl: '/'
@@ -48,11 +65,11 @@
 						Keluar 🚪
 					</button>
 				{:else}
-					<a
-						href="/auth"
-						class="hover:text-thame-3 hover:underline hidden md:block border px-2 rounded font-mono text-thame-3 border-thame-3">
+					<button
+						on:click={() => goto('/auth')}
+						class="hover:text-thame-3 hover:underline border px-2 rounded font-mono text-thame-3 border-thame-3 text-xs">
 						Masuk 🔓
-					</a>
+					</button>
 				{/if}
 			</span>
 			<div class="flex md:hidden">
@@ -69,19 +86,35 @@
 	class:hidden={!is_menu_open}>
 	{#if $page.data.session}
 		<div class="py-2">
-			<a class="text-text-3" href="/#all-access">Premium</a>
+			<a class="text-text-3" href="/#all-access">Member</a>
 		</div>
 		<div class="py-2">
 			<a href="/dash/user">
-				<em>
-					Hi 👋🏻 <strong>
-						{#await get_user() then res}
-							{#await res.json() then data}
+				<span class="flex w-full">
+					<span class="flex-grow" />
+					Hi 👋🏻&nbsp;
+					{#await get_user() then res}
+						{#await res.json() then data}
+							<strong class="pr-2 text-thame-3">
 								{data.name}
-							{/await}
+							</strong>
+							{#if data.is_premium_user}
+								<div class="">
+									<span class="p-1 text-xs rounded font-mono border border-thame-1 text-thame-1">
+										PREMIUM
+									</span>
+								</div>
+							{:else}
+								<div class="">
+									<span
+										class="p-1 text-xs rounded font-mono border border-green-500 text-green-500">
+										FREE
+									</span>
+								</div>
+							{/if}
 						{/await}
-					</strong>
-				</em>
+					{/await}
+				</span>
 			</a>
 		</div>
 

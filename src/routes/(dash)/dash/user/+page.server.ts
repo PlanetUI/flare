@@ -11,7 +11,8 @@ export const load: PageServerLoad = async (event) => {
 				name: user?.name,
 				email: user?.email,
 				discord: user?.discord,
-				github: user?.github
+				github: user?.github,
+				is_premium_user: user?.is_premium_user
 			}
 		};
 	}
