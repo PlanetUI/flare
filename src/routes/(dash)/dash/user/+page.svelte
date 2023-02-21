@@ -32,7 +32,7 @@
 			};
 		}}>
 		<h2>
-			{data.user?.email}
+			{data.user?.email || ''}
 		</h2>
 
 		<div class="grid grid-cols-4">
@@ -42,7 +42,7 @@
 				class="px-4 py-2 bg-black-1 text-text-1 col-span-3"
 				type="name"
 				name="name"
-				value={data.user?.name} />
+				value={data.user?.name || ''} />
 		</div>
 
 		<div class="grid grid-cols-4">
@@ -52,7 +52,7 @@
 				type="text"
 				name="discord"
 				id="discord"
-				value={data.user?.discord} />
+				value={data.user?.discord || ''} />
 		</div>
 
 		<div class="grid grid-cols-4">
@@ -62,7 +62,7 @@
 				type="text"
 				id="github"
 				name="github"
-				value={data.user?.github} />
+				value={data.user?.github || ''} />
 		</div>
 
 		<input

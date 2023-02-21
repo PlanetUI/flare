@@ -10,7 +10,7 @@ declare namespace App {
 			image?: string;
 			discord?: string;
 			github?: string;
-		}
+		};
 	}
 	// interface PageData {}
 	// interface Platform {}
