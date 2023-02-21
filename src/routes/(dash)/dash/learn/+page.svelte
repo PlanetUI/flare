@@ -13,6 +13,7 @@
 	<div class="grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 md:gap-2 gap-0.5 mx-auto md:py-8">
 		{#each data.posts as { slug, title, author, description, updated_at, thumbnail, is_premium }}
 			<a
+				data-sveltekit-reload
 				href={'/dash/learn/posts/' + slug}
 				class=" h-min md:rounded-lg md:border md:border-thame-1-variant md:border-opacity-50 hover:outline-thame-1-variant hover:outline hover:outline-2 hover:z-10">
 				<div class="flex h-64">

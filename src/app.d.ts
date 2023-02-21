@@ -3,16 +3,7 @@
 // and what to do when importing types
 declare namespace App {
 	// interface Error {}
-	interface Locals {
-		user: {
-			name?: string;
-			email: string;
-			image?: string;
-			discord?: string;
-			github?: string;
-			is_premium_user?: boolean;
-		};
-	}
+	// interface Locals {}
 	// interface PageData {}
 	// interface Platform {}
 

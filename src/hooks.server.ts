@@ -11,15 +11,6 @@ const authorization: Handle = async ({ event, resolve }) => {
 		const session = await event.locals.getSession();
 		if (!session) {
 			throw redirect(307, '/auth');
-		} else {
-			const user = await db_get_user({ email: session.user?.email });
-			event.locals.user = {
-				name: user?.name,
-				email: user?.email,
-				discord: user?.discord,
-				github: user?.github,
-				is_premium_user: user?.is_premium_user
-			};
 		}
 	}
 
