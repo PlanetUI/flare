@@ -3,10 +3,10 @@ title: 'Database NoSQL menggunakan MongoDB'
 thumbnail: '/MongoDB_SpringGreen.png'
 description: 'Mendalami bagaimana menggunakan MongoDB untuk membuat database NoSQL'
 author: 'Hans'
-published_at: '2023-02-22 31:17:00'
+published_at: '2023-02-22 13:17:00'
 updated_at: '2023-02-22 13:17:00'
 published: true
-is_premium: false
+is_premium: true
 ---
 
 # Database NoSQL menggunakan MongoDB

@@ -1,0 +1,84 @@
+---
+title: 'Memahami Docker dan kegunaannya'
+thumbnail: '/horizontal-logo-monochromatic-white.webp'
+description: 'Memahami dasar-dasar Docker dan kegunaannya'
+author: 'Hans'
+published_at: '2023-02-22 15:35:00'
+updated_at: '2023-02-22 15:35:00'
+published: true
+is_premium: true
+---
+
+# Memahami Docker dan kegunaannya
+
+## Apa itu Docker?
+
+Docker adalah sebuah platform yang memungkinkan kita untuk membuat, mengembangkan, dan menjalankan aplikasi dengan menggunakan container. 
+Container adalah sebuah paket yang berisi semua yang dibutuhkan untuk menjalankan sebuah aplikasi, termasuk kode, runtime, sistem tools, dan library. 
+Container memungkinkan kita untuk menjalankan aplikasi tanpa perlu menginstallnya secara langsung ke sistem operasi. 
+Container juga memungkinkan kita untuk menjalankan aplikasi yang berbeda dengan menggunakan sistem operasi yang sama.
+
+## Mengapa Docker?
+
+Docker memungkinkan kita untuk membangun, menguji, dan mengimplementasikan aplikasi dengan cepat.
+Docker memungkinkan kita untuk membagikan aplikasi dengan mudah.
+Docker memungkinkan kita untuk membangun aplikasi yang terintegrasi dengan sistem operasi dan perangkat keras yang berbeda.
+
+
+## Docker Engine
+
+Docker Engine adalah sebuah aplikasi yang berjalan di sistem operasi yang berfungsi sebagai server Docker.
+Docker Engine berjalan sebagai sebuah proses yang berjalan di sistem operasi yang berjalan di mesin fisik atau virtual.
+Docker Engine berfungsi sebagai sebuah server yang menerima perintah dari Docker CLI dan mengelola Docker Objects seperti Image, Container, Network, dan Volume.
+
+## Docker CLI
+
+Docker CLI adalah sebuah aplikasi yang berjalan di sistem operasi yang berfungsi sebagai klien Docker.
+Docker CLI berjalan sebagai sebuah proses yang berjalan di sistem operasi yang berjalan di mesin fisik atau virtual.
+Docker CLI berfungsi sebagai sebuah klien yang mengirimkan perintah ke Docker Engine.
+
+## Docker Hub
+
+Docker Hub adalah sebuah layanan yang menyediakan Image Docker yang dapat digunakan oleh pengguna Docker.
+Docker Hub menyediakan Image Docker yang dapat digunakan secara gratis dan Image Docker yang dapat dibeli.
+Docker Hub menyediakan Image Docker yang dapat digunakan secara gratis dan Image Docker yang dapat dibeli.
+
+## Dockerfile
+
+Dockerfile adalah sebuah file yang berisi perintah-perintah yang digunakan untuk membuat Image Docker.
+Dockerfile berisi perintah-perintah yang digunakan untuk membuat Image Docker.
+Dockerfile berisi perintah-perintah yang digunakan untuk membuat Image Docker.
+
+## Image
+
+Image adalah sebuah template yang berisi semua yang dibutuhkan untuk menjalankan sebuah aplikasi.
+Image berisi semua yang dibutuhkan untuk menjalankan sebuah aplikasi.
+
+## Container
+
+Container adalah sebuah instance dari Image yang berjalan sebagai sebuah proses.
+Container berjalan sebagai sebuah proses.
+
+## Docker Compose
+
+Docker Compose adalah sebuah aplikasi yang berjalan di sistem operasi yang berfungsi sebagai klien Docker.
+Docker Compose berjalan sebagai sebuah proses yang berjalan di sistem operasi yang berjalan di mesin fisik atau virtual.
+Docker Compose berfungsi sebagai sebuah klien yang mengirimkan perintah ke Docker Engine.
+
+## Docker Swarm
+
+Docker Swarm adalah sebuah aplikasi yang berjalan di sistem operasi yang berfungsi sebagai klien Docker.
+Docker Swarm berjalan sebagai sebuah proses yang berjalan di sistem operasi yang berjalan di mesin fisik atau virtual.
+Docker Swarm berfungsi sebagai sebuah klien yang mengirimkan perintah ke Docker Engine.
+
+## Docker Machine
+
+Docker Machine adalah sebuah aplikasi yang berjalan di sistem operasi yang berfungsi sebagai klien Docker.
+Docker Machine berjalan sebagai sebuah proses yang berjalan di sistem operasi yang berjalan di mesin fisik atau virtual.
+Docker Machine berfungsi sebagai sebuah klien yang mengirimkan perintah ke Docker Engine.
+
+## Docker Registry
+
+Docker Registry adalah sebuah aplikasi yang berjalan di sistem operasi yang berfungsi sebagai server Docker.
+Docker Registry berjalan sebagai sebuah proses yang berjalan di sistem operasi yang berjalan di mesin fisik atau virtual.
+Docker Registry berfungsi sebagai sebuah server yang menerima perintah dari Docker CLI dan mengelola Docker Objects seperti Image, Container, Network, dan Volume.
