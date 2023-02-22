@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { SvelteComponentTyped } from 'svelte/internal';
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 	type C = $$Generic<typeof SvelteComponentTyped<any, any, any>>;
@@ -11,6 +12,10 @@
 	let is_render = false;
 	if (is_premium === data.is_premium_user) is_render = true;
 	if (!is_premium) is_render = true;
+
+	onMount(() => {
+		window.location.href = '#read';
+	});
 </script>
 
 <svelte:head>
@@ -18,7 +23,7 @@
 	<meta name="description" content={data.frontmatter?.description} />
 </svelte:head>
 
-<div class="pb-4">
+<div id="read" class="pb-4">
 	<a href="/dash/learn">⬅ Kembali</a>
 </div>
 

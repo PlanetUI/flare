@@ -9,7 +9,7 @@ export const load: PageLoad = async ({ params, setHeaders }) => {
 	const modules = import.meta.glob(`/src/posts/**/*.{md,svx,svelte.md}`);
 	let match: { path?: string; resolver?: App.MdsvexResolver } = {};
 	for (const [path, resolver] of Object.entries(modules)) {
-		if (slugFromPath(path) === params.slug.replace("#","")) {
+		if (slugFromPath(path) === params.slug) {
 			match = { path, resolver: resolver as unknown as App.MdsvexResolver };
 			const post = await match.resolver?.();
 			if (!post || !post.metadata.published) {
