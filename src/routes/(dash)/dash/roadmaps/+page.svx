@@ -54,4 +54,4 @@
     - Error Redirects
     - Page Options
 - Database
-    - MongoDB
+    - [MongoDB](/dash/learn/posts/dasar-mongodb)
