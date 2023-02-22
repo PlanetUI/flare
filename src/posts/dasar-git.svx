@@ -1,0 +1,27 @@
+---
+title: 'Source Code Management (SCM) menggunakan Git dan GitHub'
+thumbnail: '/GitHub_Logo_White.png'
+description: 'Mendalami bagaimana menggunakan Git dan GitHub untuk melakukan source code management (SCM) pada proyek Node.js'
+author: 'Hans'
+published_at: '2023-02-22 31:06:00'
+updated_at: '2023-02-22 13:06:00'
+published: true
+is_premium: false
+---
+
+# Source Code Management (SCM) menggunakan Git dan GitHub
+
+## Apa itu Git?
+
+Git adalah salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat 
+lunak yang diciptakan oleh Linus Torvalds. Pada dasarnya, Git adalah sistem yang mencatat setiap 
+perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri. 
+Git juga menyimpan sejarah perubahan-perubahan tersebut, 
+jadi developer dapat kembali ke versi sebelumnya jika diperlukan.
+
+## Apa itu GitHub?
+
+GitHub adalah layanan web yang menyediakan layanan hosting Git repositori. 
+GitHub menawarkan semua fitur yang ada pada Git,
+sehingga developer dapat melakukan berbagai aktivitas SCM seperti commit,
+push, pull, dan lain sebagainya.

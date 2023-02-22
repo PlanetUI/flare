@@ -11,7 +11,7 @@
 ### 2. Basic
 
 - Git
-    - Apa itu Git?
+    - [Apa itu Git?](/dash/learn/posts/dasar-git)
     - Git Basic Command
     - Service Git dengan GitHub
     - Git Advance Command
