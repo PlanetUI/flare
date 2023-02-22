@@ -22,8 +22,9 @@
 				id="card-1"
 				class="border rounded-xl border-thame-1 max-w-md mx-auto w-full border-opacity-50 hover:border-opacity-100 hover:bg-black-7">
 				<div class="p-4">
-					<div>6 Bulan</div>
+					<div class="opacity-50">6 Bulan</div>
 					<div class="text-3xl font-bold">Rp. 99.000/bln</div>
+					<div class="text-xs opacity-50">Rp. 594.000</div>
 					<div class="text-left pt-4">
 						<ul>
 							<li>Premium akses selama 6 bulan.</li>
@@ -45,8 +46,9 @@
 				id="card-2"
 				class="border rounded-xl border-thame-3 text-thame-3 max-w-md mx-auto w-full border-opacity-50 hover:border-opacity-100 hover:bg-black-7">
 				<div class="p-4">
-					<div>12 Bulan</div>
+					<div class="opacity-50">12 Bulan</div>
 					<div class="text-3xl font-bold">Rp. 75.000/bln</div>
+					<div class="text-xs opacity-50">Rp. 900.000</div>
 					<div class="text-left pt-4">
 						<ul>
 							<li>Premium akses selama 12 bulan.</li>
@@ -67,7 +69,7 @@
 		</div>
 		<div
 			id="card-3"
-			class="border rounded-xl border-thame-2 text-thame-2 max-w-4xl mx-auto w-full mt-4 text-center border-opacity-50 hover:border-opacity-100 hover:bg-black-7 ">
+			class="border max-w-md rounded-xl border-thame-2 text-thame-2 md:max-w-4xl mx-auto w-full mt-4 text-center border-opacity-50 hover:border-opacity-100 hover:bg-black-7 ">
 			<div class="p-4">
 				<div class="">Akses Premium Selamanya</div>
 				<del class="text-3xl font-bold">Rp. 7.500.000</del>
