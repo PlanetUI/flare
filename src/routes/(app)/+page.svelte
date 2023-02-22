@@ -1,15 +1,23 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import type { PageData } from './$types';
+	import { fly } from 'svelte/transition';
 	export let data: PageData;
 
 	// tilt effect
 	import tilt from '$lib/tilt.js';
+	import { onMount } from 'svelte';
 	let reverse = false;
 
 	// animation  scroll
 	const layers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	let y = 0;
+
+	let show = false;
+
+	onMount(() => {
+		show = true;
+	});
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -28,33 +36,35 @@
 			<!-- alt="parallax layer {layer}" -->
 		{/each}
 	</div>
-	<div class="m-auto h-fit p-4">
-		<div class="grid md:grid-cols-2 md:gap-24">
-			<div class="flex">
-				<div class="m-auto">
-					<span class="text-xl font-semibold text-text-2">PRACTICAL</span>
-					<div class="md:text-7xl text-4xl tracking-widest font-semibold">
-						<span class="text-text-1">SVELTE</span><span class=" pl-1 text-text-3">KIT</span>
-					</div>
-					<div class="-mt-1 pb-2 text-text-2 text-2xl">Belajar Fullstack Developer</div>
-					<div class="pt-5">
-						<a
-							data-sveltekit-preload-data="hover"
-							href="/dash/learn"
-							class="hover:no-underline hover:text-text-1 hover:bg-thame-1-variant bg-thame-1 px-4 py-3 rounded text-xl text-white">
-							Mulai Belajar ➡
-						</a>
+	{#if show}
+		<div in:fly={{ y: 200, duration: 2000 }} class="m-auto h-fit p-4">
+			<div class="grid md:grid-cols-2 md:gap-24">
+				<div class="flex">
+					<div class="m-auto">
+						<span class="text-xl font-semibold text-text-2">PRACTICAL</span>
+						<div class="md:text-7xl text-4xl tracking-widest font-semibold">
+							<span class="text-text-1">SVELTE</span><span class=" pl-1 text-text-3">KIT</span>
+						</div>
+						<div class="-mt-1 pb-2 text-text-2 text-2xl">Belajar Fullstack Developer</div>
+						<div class="pt-5">
+							<a
+								data-sveltekit-preload-data="hover"
+								href="/dash/learn"
+								class="hover:no-underline hover:text-text-1 hover:bg-thame-1-variant bg-thame-1 px-4 py-3 rounded text-xl text-white">
+								Mulai Belajar ➡
+							</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="md:flex hidden" use:tilt={{ scale: 1.1, reverse }}>
-				<img
-					class="m-auto w-32 h-32 md:w-72 md:h-72 rounded-full logo-svelte"
-					src="/svelte.png"
-					alt="Logos" />
+				<div class="md:flex hidden" use:tilt={{ scale: 1.1, reverse }}>
+					<img
+						class="m-auto w-32 h-32 md:w-72 md:h-72 rounded-full logo-svelte"
+						src="/svelte.png"
+						alt="Logos" />
+				</div>
 			</div>
 		</div>
-	</div>
+	{/if}
 </main>
 
 <div class=" bg-black-1 text-thame-1 flex py-12">
@@ -192,9 +202,9 @@
 	.parallax-container img {
 		position: absolute;
 		top: 0;
-		left: 0;
+		rigth: 0;
 		width: auto;
-		height: 900px;
+		height: 780px;
 		will-change: transform;
 	}
 
