@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { signOut } from '@auth/sveltekit/client';
+	import { outclick } from '$lib/outclick';
 
 	let is_menu_open = false;
 
@@ -73,7 +74,11 @@
 				{/if}
 			</span>
 			<div class="flex md:hidden">
-				<button on:click={() => (is_menu_open = !is_menu_open)} class="m-auto border py-1 px-3">
+				<button
+					use:outclick
+					on:outclick={() => (is_menu_open = false)}
+					on:click={() => (is_menu_open = !is_menu_open)}
+					class="m-auto border py-1 px-3">
 					⚙
 				</button>
 			</div>
