@@ -1,6 +1,8 @@
+<script>
+	import EarlyAccess from '$lib/components/early_access.svelte';
+</script>
+
 <main class="w-full bg-black-1 p-4 h-max">
-	<div class="border bg-black-7 font-bold p-4 text-green-500 rounded border-green-500 border-l-8">
-		Akses awal, akan ada konten dan fitur belum tersedia.
-	</div>
+	<EarlyAccess />
 	<slot />
 </main>
