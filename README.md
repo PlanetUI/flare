@@ -1,5 +1,7 @@
 ![CI/CD](https://github.com/PlanetUI/flare/actions/workflows/node.yml/badge.svg)
 
-# Flare ERP (Enterprise Resource Planning)
+# Flare
 
-Flare ERP is simple ERP built with svelte and will be used for online learning platform.
+Flare is app built with SvelteKit and will be used for online learning platform.
+
+Expect to see a lot of changes in the coming days.
