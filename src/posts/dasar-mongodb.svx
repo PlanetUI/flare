@@ -4,22 +4,162 @@ thumbnail: '/MongoDB_SpringGreen.png'
 description: 'Mendalami bagaimana menggunakan MongoDB untuk membuat database NoSQL'
 author: 'Hans'
 published_at: '2023-02-22 13:17:00'
-updated_at: '2023-02-22 13:17:00'
+updated_at: '2023-03-31 23:00:00'
 published: true
 is_premium: true
 ---
 
+<script>
+    import Filename from '$lib/components/filename.svelte';
+</script>
+
 # Database NoSQL menggunakan MongoDB
 
-## Apa itu MongoDB?
+MongoDB adalah salah satu jenis database NoSQL (Not Only SQL) yang saat ini sedang populer di kalangan programmer dan developer. MongoDB sendiri merupakan salah satu konsep database yang mengimplementasikan pemikiran NoSQL. Pada artikel kali ini, kita akan membahas secara detail tentang MongoDB dan mengapa harus menggunakan MongoDB beserta kelebihan dan kekurangan MongoDB.
 
-MongoDB adalah sebuah database NoSQL yang menggunakan bahasa JSON.
+Apa itu MongoDB?
 
-## Mengapa MongoDB?
+MongoDB adalah bentuk baru dari database yakni NoSQL (Not Only SQL), menurut aslinya NoSQL berarti Not Only SQL, dalam konteks database NoSQL, arti tersebut bisa diartikan sebagai pengolahan data yang tidak hanya menggunakan SQL atau perintah-perintah SQL dalam pengelolaannya.
 
-MongoDB memiliki beberapa kelebihan dibandingkan dengan database SQL, diantaranya:
+MongoDB adalah database NoSQL yang terdiri dari dokumen dan perilaku pada MongoDB disebut juga dokument-oriented, sehingga MongoDB bisa dipandang sebagai sebuah "file system" untuk database dimana kita menyimpan data dalam bentuk dokumen-dokumen.
 
-  * MongoDB memiliki struktur data yang fleksibel, sehingga tidak perlu membuat tabel terlebih dahulu.
-  * MongoDB memiliki performa yang lebih baik dibandingkan dengan database SQL.
-  * MongoDB memiliki fitur yang lebih lengkap dibandingkan dengan database SQL.
+MongoDB biasanya digunakan untuk mengolah data yang berskala besar (big data) dengan tingkat kompleksitas yang tinggi, seperti data yang berasal dari social media, e-commerce, dan lain-lain. MongoDB sangat populer karena kemampuan skalanya yang tinggi dan fleksibilitasnya yang sangat baik dalam menyimpan dan mengelola data.
 
+Kelebihan MongoDB
+
+Skalabilitas yang baik MongoDB dirancang untuk bekerja dalam lingkungan yang sangat besar. Dalam pengertian ini, MongoDB dapat diinstal di beberapa server dalam mode cluster, sehingga memungkinkan aplikasi yang berkaitan dengan basis data untuk bekerja dengan cepat dan efisien.
+
+Fleksibilitas Keuntungan lain dari MongoDB adalah memungkinkan data yang bersifat semi-terstruktur dan tak terstruktur disimpan, yang terbentuk dalam dokumen tanpa perlu melakukan penambahan kolom, tabel atau struktur dataset yang berantakan, sehingga pengembangannya lebih mudah dilakukan.
+
+Performa yang Cepat MongoDB bekerja dengan memori yang lebih besar sehingga dapat mengakses data dengan putaran yang jauh lebih kecil. Selain itu, MongoDB adalah Open Source, sehingga memungkinkan programmer dan pengembang untuk mengedit dan men-tweak database sesuai dengan kebutuhan aplikasi.
+
+Ketersediaan Data yang Tinggi MongoDB dirancang untuk berkaitan dengan jaringan, sehingga sistem akan secara otomatis memperbaiki diri pada saat terjadi kesalahan atau kerusakan pada jaringan. Selain itu, MongoDB dapat memindahkan data dari satu node ke node lain pada saat terjadi kesalahan. Hal tersebut membuat sistem dapat terus bekerja bahkan jika terdapat kesalahan atau kerusakan pada jaringan.
+
+Database yang Scalable sejalan Dengan Pertumbuhan Bisnis MongoDB dirancang untuk berosilasi dalam permintaan yang sangat tinggi. Bahkan, skala besar bahkan dapat diatur dengan satu node tunggal saja serta dapat membesarkan bisnis saat pertumbuhannya semakin besar.
+
+Kekurangan MongoDB
+
+Konsumsi Memory dan Disk yang Tinggi Kekurangan pertama dari MongoDB adalah konsumsi memory yang juga disk yang tinggi. Hal ini disebabkan karena penggunaan index yang berulang-ulang pada database.
+
+Tidak Secure MongoDB kurang aman dibandingkan dengan database lainnya, ini dikarenakan tidak adanya login yang standar pada MongoDB. Di samping itu, konfigurasi default dari MongoDB sangat sensitif terhadap serangan yang berasal dari internet.
+
+Kesulitan Dalam Query Ketika mencoba untuk mencari data, pengguna dapat mengalami kesulitan memahami jalan seleksi data dan operasi join. Meskipun ada operasi untuk query, pengguna mungkin memerlukan waktu untuk mempelajarinya.
+
+Contoh Code CRUD di MongoDB menggunakan Javascript
+
+CRUD adalah singkatan dari create, read, update, dan delete, yang merupakan operasi dasar dalam pengolahan data (database).
+
+Untuk melakukan CRUD di MongoDB menggunakan Javascript, kita memerlukan beberapa library, di antaranya sebagai berikut:
+
+mongodb: library utama MongoDB untuk menghubungkan aplikasi dengan database MongoDB.
+assert: library yang digunakan untuk menguji dan memastikan bahwa kode kita sudah berjalan dengan benar.
+mongodb-uri: library yang digunakan untuk memproses URI (Uniform Resource Identifier) MongoDB.
+Berikut ini adalah contoh sederhana kode CRUD di MongoDB menggunakan Javascript:
+
+Melakukan Koneksi ke Database
+
+<Filename logo="/JS.svg" name="script.js" />
+
+```js
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
+const mongodbUri = require('mongodb-uri');
+
+// Connection URL
+const uri = 'mongodb://localhost:27017/myproject';
+const uriObject = mongodbUri.parse(uri);
+const dbName = uriObject.database;
+
+// Database Name
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(function(err) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+
+  const db = client.db(dbName);
+
+  client.close();
+});
+```
+
+Menambah Data (Create)
+
+<Filename logo="/JS.svg" name="script.js" />
+
+```js
+const insertDocuments = function(db, callback) {
+  // Get the documents collection
+  const collection = db.collection('documents');
+  // Insert some documents
+  collection.insertMany([
+    {a : 1}, {a : 2}, {a : 3}
+  ], function(err, result) {
+    assert.equal(err, null);
+    assert.equal(3, result.result.n);
+    assert.equal(3, result.ops.length);
+    console.log("Inserted 3 documents into the collection");
+    callback(result);
+  });
+}
+```
+
+Membaca Data (Read)
+
+<Filename logo="/JS.svg" name="script.js" />
+
+```js
+const findDocuments = function(db, callback) {
+  // Get the documents collection
+  const collection = db.collection('documents');
+  // Find some documents
+  collection.find({}).toArray(function(err, docs) {
+    assert.equal(err, null);
+    console.log("Found the following records");
+    console.log(docs);
+    callback(docs);
+  });
+}
+```
+
+Mengubah Data (Update)
+
+<Filename logo="/JS.svg" name="script.js" />
+
+```js
+const updateDocument = function(db, callback) {
+  // Get the documents collection
+  const collection = db.collection('documents');
+  // Update document where a is 2, set b equal to 1
+  collection.updateOne({ a : 2 }
+    , { $set: { b : 1 } }, function(err, result) {
+    assert.equal(err, null);
+    assert.equal(1, result.result.n);
+    console.log("Updated the document with the field a equal to 2");
+    callback(result);
+  });  
+}
+```
+
+Menghapus Data (Delete)
+
+<Filename logo="/JS.svg" name="script.js" />
+
+```js
+const removeDocument = function(db, callback) {
+  // Get the documents collection
+  const collection = db.collection('documents');
+  // Delete document where a is 3
+  collection.deleteOne({ a : 3 }, function(err, result) {
+    assert.equal(err, null);
+    assert.equal(1, result.result.n);
+    console.log("Removed the document with the field a equal to 3");
+    callback(result);
+  });    
+}
+```
+
+Kesimpulan
+
+MongoDB merupakan database NoSQL yang sangat populer di kalangan developer dan programmer, khususnya untuk mengolah data yang berskala besar. MongoDB memiliki kelebihan dalam hal skalabilitas, fleksibilitas, performa yang cepat, ketersediaan data yang tinggi, dan database yang scalable sejalan dengan pertumbuhan bisnis. Namun, MongoDB juga memiliki kekurangan dalam hal konsumsi memory dan disk yang tinggi, kurang secure, dan kesulitan dalam query.
+
+Dalam melakukan CRUD di MongoDB menggunakan Javascript, kita memerlukan beberapa library, antara lain mongodb, assert, dan mongodb-uri. Dalam mengimplementasikan kode CRUD di MongoDB menggunakan Javascript, kita memerlukan proses koneksi ke database, pembacaan data, penambahan data, update data, dan penghapusan data.
